@@ -2,7 +2,7 @@ const HeroSection = () => {
     return (
         <header className="hero-section-container position-relative text-white">
             <img
-                src="/images/hero-img.jpg"
+                src="/images/imara_banner_img.webp"
                 className="img-fluid w-100"
                 alt="hero-img"
             />
