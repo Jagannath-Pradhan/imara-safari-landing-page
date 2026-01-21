@@ -1,0 +1,401 @@
+/* utility classes start */
+/* .text-theme {
+  color: #a9774e !important;
+} */
+
+.bg-theme-light {
+  background-color: #f7f7f7 !important;
+}
+
+.btn-theme {
+  background-color: #a9774e !important;
+  color: white !important;
+  border: none;
+  transition: background-color 0.5s !important;
+
+  &:hover {
+    background-color: black !important;
+  }
+}
+
+.text-theme {
+  color: #a9774e !important;
+}
+
+/* utility classes end */
+
+
+
+/* hero section start */
+
+/* desktop */
+.hero-section-container h1 {
+  font-size: 3rem;
+}
+
+/* mobile */
+@media (max-width: 576px) {
+  .hero-section-container h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.scroll-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #a9774e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: blue;
+  }
+}
+
+/* hero section end */
+
+
+/* national parks section start */
+
+.park-card {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  color: #a9774e !important;
+  transition: color 0.5s;
+
+  &:hover {
+    color: black !important;
+  }
+}
+
+/* Image wrapper */
+.park-img-wrapper {
+  overflow: hidden;
+}
+
+.national-parks-section .card .card-body p {
+  text-align: center;
+}
+
+/* Image default → zoomed in */
+.park-img {
+  width: 100%;
+  object-fit: contain;
+  transform: scale(1.15);
+  transition: transform 0.6s ease;
+
+  /* Hover → zoom out */
+  &:hover {
+    transform: scale(1);
+  }
+}
+
+/* national parks section end */
+
+
+
+/* contact information start */
+
+.security-message {
+  color: #2a7f62;
+  font-size: 17px;
+  margin-top: 10px;
+  padding: 10px;
+  border-left: 4px solid #2a7f62;
+  background-color: #f3fef7;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* contact information end */
+
+
+/* benefits section start */
+.benefits-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.benefit-card {
+    padding: 30px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    height: 100%;
+    gap: 20px;
+}
+
+.benefit-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+}
+
+.benefit-icon-wrapper {
+    flex-shrink: 0;
+}
+
+.benefit-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #f5e6d3 0%, #ede0cf 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.benefit-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.benefit-content {
+    flex: 1;
+}
+
+.benefit-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.benefit-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4a574 0%, transparent 100%);
+}
+
+.benefit-description {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .benefit-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .benefit-title::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .benefit-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+    }
+
+    .benefit-icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .benefits-section h1 {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    .benefit-description {
+        font-size: 0.9rem;
+    }
+
+    .benefit-title {
+        font-size: 1.3rem;
+    }
+}
+/* benefits section end */
+
+
+
+
+/* testimonial section start */
+
+.testimonial-section {
+    background-color: #f5f5f5;
+    padding: 120px 0;
+}
+
+.testimonial-swiper {
+    padding: 40px 20px 80px;
+}
+
+.testimonial-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.star-rating .star {
+    color: #d4a574;
+    font-size: 24px;
+}
+
+.testimonial-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+/* Review Text */
+.testimonial-review {
+    font-size: 1.15rem;
+    color: #888888;
+    line-height: 1.8;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Author Info */
+.author-info {
+    display: inline-flex;
+    align-items: center;
+}
+
+.author-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+}
+
+.author-details {
+    text-align: left !important;
+}
+
+.author-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.author-date {
+    font-size: 1rem;
+    color: #c9956b;
+    margin: 0;
+}
+
+/* Swiper Pagination */
+.testimonial-swiper .swiper-pagination {
+    bottom: 30px;
+}
+
+.testimonial-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #d4a574;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-title {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-review {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .author-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .author-name {
+        font-size: 1.1rem;
+    }
+
+    .author-date {
+        font-size: 0.9rem;
+    }
+
+    .star-rating .star {
+        font-size: 20px;
+    }
+
+    .testimonial-swiper {
+        padding: 20px 10px 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-section {
+        padding: 50px 0;
+    }
+
+    .testimonial-title {
+        font-size: 1.3rem;
+    }
+
+    .testimonial-review {
+        font-size: 0.95rem;
+    }
+}
+
+/* testimonial section end */
+
+
+/* experiences section start */
+/* default (mobile & tablet) */
+.experience-img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* lg screens and above */
+@media (min-width: 992px) {
+  .experience-img-wrapper {
+    height: 220px;
+    overflow: hidden;
+  }
+  
+  .experience-img-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* experiences section end */
