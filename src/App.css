@@ -6,7 +6,7 @@ body {
 
 
 .bg-theme-light {
-  background-color: #f7f7f7 !important;
+  background-color: #fde6d5 !important;
 }
 
 .btn-theme {
@@ -248,7 +248,7 @@ body {
 /* testimonial section start */
 
 .testimonial-section {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     padding: 120px 0;
 }
 

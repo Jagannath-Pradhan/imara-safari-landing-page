@@ -19,7 +19,7 @@ function App() {
       <NationalParks />
       <PlanningDays />
       <SafariStyle />
-      {/* <PlanningSafari /> */}
+      <PlanningSafari />
       <ContactInformation />
       <Benefits />
       <Testimonial />
