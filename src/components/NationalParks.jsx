@@ -55,7 +55,7 @@ const NationalParks = () => {
             image: "/images/national-parks/not-sure.webp",
             description:
                 "If you’re interested in other national parks or are not yet certain about your destinations, our experts will be happy to create a tailor-made travel plan for you.",
-        },
+        }
     ];
 
     return (

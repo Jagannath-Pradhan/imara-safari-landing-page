@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="bg-black text-white p-4 shadow-sm">
             <div className="text-center">
                 <p className="small mb-1">
-                    &copy;  {currentYear} Fahamu Safaris | All rights reserved.
+                    &copy;  {currentYear} Imara Safaris | All rights reserved.
                 </p>
             </div>
         </footer>

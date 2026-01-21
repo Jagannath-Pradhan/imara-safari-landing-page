@@ -13,7 +13,7 @@ const ContactInformation = () => {
                             We will send you offers via email. Your contact information will remain confidential and will only be used for <span className="fw-bold">safari offers in Tanzania.</span>
                         </p>
                     </div>
-                    <div className="col-12 col-md-8 mx-auto">
+                    <div className="col-12 col-md-6 mx-auto">
                         <form className="d-flex flex-column">
                             <div className="mb-3">
                                 <label htmlFor="exampleInputFullname" className="form-label fw-bold">
@@ -21,7 +21,7 @@ const ContactInformation = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    className="form-control"
+                                    className="form-control py-3"
                                     id="exampleInputFullname"
                                     placeholder="Full Name"
                                 />
@@ -32,7 +32,7 @@ const ContactInformation = () => {
                                 </label>
                                 <input
                                     type="email"
-                                    className="form-control"
+                                    className="form-control py-3"
                                     id="exampleInputEmail1"
                                     placeholder="Email ID"
                                 />
@@ -41,15 +41,29 @@ const ContactInformation = () => {
                                 <label htmlFor="exampleInputPhone" className="form-label fw-bold">
                                     Phone Number (Please include the international country code) (optional)
                                 </label>
-                                <input
-                                    type="tel"
-                                    className="form-control"
-                                    id="exampleInputPhone"
-                                    placeholder="Phone"
-                                />
+
+                                <div className="d-flex align-items-center gap-3">
+                                    <select className="form-select py-3">
+                                        <option value="Country Code" disabled>Country Code</option>
+                                        <option value="+1">+1 (USA)</option>
+                                        <option value="+44">+44 (UK)</option>
+                                        <option value="+91">+91 (India)</option>
+                                        <option value="+255">+255 (Tanzania)</option>
+                                        <option value="+61">+61 (Australia)</option>
+                                        <option value="+971">+971 (UAE)</option>
+                                    </select>
+
+                                    <input
+                                        type="tel"
+                                        className="form-control py-3"
+                                        id="exampleInputPhone"
+                                        placeholder="Phone"
+                                    />
+                                </div>
                             </div>
-                            <div className="security-message ">
-                                <FaLock className="mb-3" />
+
+                            <div className="security-message">
+                                <FaLock className="mb-3" size={22} />
                                 <p>Your mobile number is safe with us and will only be used for communication related to your booking inquiry.</p>
                             </div>
                             <div className="mb-3">
@@ -58,7 +72,7 @@ const ContactInformation = () => {
                                 </label>
                                 <input
                                     type="number"
-                                    className="form-control"
+                                    className="form-control py-3"
                                     id="exampleInputPeople"
                                     placeholder="Number of People"
                                 />

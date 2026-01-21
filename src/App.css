@@ -1,14 +1,16 @@
 /* utility classes start */
-/* .text-theme {
-  color: #a9774e !important;
-} */
+
+body {
+  font-family: "Soleil" !important;
+}
+
 
 .bg-theme-light {
   background-color: #f7f7f7 !important;
 }
 
 .btn-theme {
-  background-color: #a9774e !important;
+  background-color: #d87028 !important;
   color: white !important;
   border: none;
   transition: background-color 0.5s !important;
@@ -19,7 +21,7 @@
 }
 
 .text-theme {
-  color: #a9774e !important;
+  color: #d87028 !important;
 }
 
 /* utility classes end */
@@ -40,13 +42,24 @@
   }
 }
 
+.hero-text {
+  width: 100%;
+  max-width: 1100px; /* widen text container */
+}
+
+.hero-text h2 {
+  max-width: 1000px; /* widen h2 specifically */
+  margin: 0 auto;
+}
+
+
 .scroll-button {
   display: block;
   margin: 20px auto;
   padding: 10px 20px;
   font-size: 24px;
   cursor: pointer;
-  background-color: #a9774e;
+  background-color: #d87028;
   color: white;
   border: none;
   border-radius: 5px;
@@ -65,7 +78,7 @@
 .park-card {
   transition: transform 0.3s ease;
   cursor: pointer;
-  color: #a9774e !important;
+  color: #d87028 !important;
   transition: color 0.5s;
 
   &:hover {
@@ -105,7 +118,8 @@
   color: #2a7f62;
   font-size: 17px;
   margin-top: 10px;
-  padding: 10px;
+  padding: 0 10px;
+  padding-top: 0.5rem;
   border-left: 4px solid #2a7f62;
   background-color: #f3fef7;
   border-radius: 5px;
@@ -179,7 +193,7 @@
     bottom: 0;
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, #d4a574 0%, transparent 100%);
+    background: linear-gradient(90deg, #d87028 0%, transparent 100%);
 }
 
 .benefit-description {
@@ -255,7 +269,7 @@
 }
 
 .star-rating .star {
-    color: #d4a574;
+    color: #d87028;
     font-size: 24px;
 }
 
@@ -303,7 +317,7 @@
 
 .author-date {
     font-size: 1rem;
-    color: #c9956b;
+    color: #d87028;
     margin: 0;
 }
 
@@ -315,7 +329,7 @@
 .testimonial-swiper .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
-    background: #d4a574;
+    background: #d87028;
     opacity: 0.3;
     transition: all 0.3s ease;
 }
