@@ -38,9 +38,11 @@ const Benefits = () => {
                         <h3 className="text-capitalize text-theme" style={{ letterSpacing: "1px", lineHeight: "1" }}>
                             Your Benefits
                         </h3>
-                        <h1
-                            className="text-uppercase fw-bold"
-                        >
+                        <h1 className="text-uppercase" style={{ 
+                            fontSize: '2rem', 
+                            fontWeight: '600',
+                            color: '#212529'
+                        }}>
                             Relax and Enjoy Your Vacation
                         </h1>
                     </div>

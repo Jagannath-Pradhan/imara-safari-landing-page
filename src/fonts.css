@@ -1,8 +1,32 @@
 /* Soleil */
 @font-face {
   font-family: "Soleil";
-  src: url("/fonts/fonnts.com-SoleilRegular.woff2") format("woff2");
+  src: url("./fonts/fonnts.com-SoleilRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+/* AcuminPro */
+@font-face {
+  font-family: "AcuminPro-Semibold";
+  src: url("./fonts/fonnts.com-AcuminPro-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "AcuminPro-Bold";
+  src: url("./fonts/fonnts.com-AcuminPro-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "AcuminPro-Black";
+  src: url("./fonts/fonnts.com-AcuminPro-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  /* font-display: swap; */
 }

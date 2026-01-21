@@ -4,7 +4,11 @@ const Experiences = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4 text-center">
-                        <h1 className="text-uppercase fw-bold">
+                        <h1 className="text-capitalize" style={{ 
+                            fontSize: '2rem', 
+                            fontWeight: '600',
+                            color: '#212529'
+                        }}>
                             EXPERIENCE TANZANIA LIKE NEVER BEFORE
                         </h1>
                         <p className="text-secondary fs-5">

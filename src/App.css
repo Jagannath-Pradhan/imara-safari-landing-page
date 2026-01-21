@@ -2,6 +2,7 @@
 
 body {
   font-family: "Soleil" !important;
+  /* font-family: "AcuminPro" !important; */
 }
 
 
@@ -24,6 +25,11 @@ body {
   color: #d87028 !important;
 }
 
+h1 {
+    font-family: "AcuminPro-Black" !important;
+    font-size: 1.8rem !important;
+}
+
 /* utility classes end */
 
 
@@ -33,6 +39,7 @@ body {
 /* desktop */
 .hero-section-container h1 {
   font-size: 3rem;
+  font-family: 'AcuminPro-Semibold' !important;
 }
 
 /* mobile */

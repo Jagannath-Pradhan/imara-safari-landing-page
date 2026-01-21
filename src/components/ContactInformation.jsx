@@ -6,7 +6,11 @@ const ContactInformation = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
-                        <h1 className="text-capitalize">
+                        <h1 className="text-capitalize" style={{ 
+                            fontSize: '2rem', 
+                            fontWeight: '600',
+                            color: '#212529'
+                        }}>
                             5. Contact Information
                         </h1>
                         <p className="text-secondary fs-5">
