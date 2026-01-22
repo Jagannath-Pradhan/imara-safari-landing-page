@@ -21,7 +21,7 @@ const ContactInformation = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    className="form-control py-3"
+                                    className="form-control"
                                     id="exampleInputFullname"
                                     placeholder="Full Name"
                                 />
@@ -32,7 +32,7 @@ const ContactInformation = () => {
                                 </label>
                                 <input
                                     type="email"
-                                    className="form-control py-3"
+                                    className="form-control"
                                     id="exampleInputEmail1"
                                     placeholder="Email ID"
                                 />
@@ -43,7 +43,7 @@ const ContactInformation = () => {
                                 </label>
 
                                 <div className="d-flex align-items-center gap-3">
-                                    <select className="form-select py-3">
+                                    <select className="form-select">
                                         <option value="Country Code" disabled>Country Code</option>
                                         <option value="+1">+1 (USA)</option>
                                         <option value="+44">+44 (UK)</option>
@@ -55,7 +55,7 @@ const ContactInformation = () => {
 
                                     <input
                                         type="tel"
-                                        className="form-control py-3"
+                                        className="form-control"
                                         id="exampleInputPhone"
                                         placeholder="Phone"
                                     />
@@ -72,7 +72,7 @@ const ContactInformation = () => {
                                 </label>
                                 <input
                                     type="number"
-                                    className="form-control py-3"
+                                    className="form-control"
                                     id="exampleInputPeople"
                                     placeholder="Number of People"
                                 />

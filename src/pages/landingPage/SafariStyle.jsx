@@ -1,69 +1,93 @@
-import { forwardRef } from "react";
+import { useState, forwardRef } from "react";
+import { Check } from "lucide-react";
 
-// const SafariStyle = () => {
-    const SafariStyle = forwardRef((props, ref) => {
+const SafariStyle = forwardRef(
+  ({ scrollToPlanningSafari }, ref) => {
+    const [selectedStyle, setSelectedStyle] = useState(null);
+
     const safariStyles = [
-        {
-            id: 1,
-            name: "Budget",
-            image: "/images/safari-style/budget.webp"
-        },
-        {
-            id: 2,
-            name: "Economy",
-            image: "/images/safari-style/economy.webp"
-        },
-        {
-            id: 3,
-            name: "Luxury",
-            image: "/images/safari-style/luxury.webp"
-        },
-        {
-            id: 4,
-            name: "Not decided yet",
-            image: "/images/safari-style/not-decided.webp"
-        }
+      { id: 1, name: "Budget", image: "/images/safari-style/budget.webp" },
+      { id: 2, name: "Economy", image: "/images/safari-style/economy.webp" },
+      { id: 3, name: "Luxury", image: "/images/safari-style/luxury.webp" },
+      { id: 4, name: "Not decided yet", image: "/images/safari-style/not-decided.webp" },
     ];
 
+    const handleStyleClick = (styleId) => {
+      setSelectedStyle(styleId);
+      scrollToPlanningSafari(); // SAME BEHAVIOR AS PlanningDays
+    };
+
+    const isStyleSelected = (styleId) => selectedStyle === styleId;
+
     return (
-        <section className="safari-style-section py-5 bg-theme-light" ref={ref}>
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 mb-4">
-                        <h3 className="text-capitalize">
-                            3. Which safari style do you prefer?
-                        </h3>
-                        <p>
-                            Tell us your preferences, and we’ll create your dream safari.
-                        </p>
-                    </div>
-
-                    {safariStyles.map((safariStyle) => (
-                        <div
-                            key={safariStyle.id}
-                            className="col-sm-6 col-lg-3 mb-4 d-flex"
-                        >
-                            <div className="card shadow park-card h-100 d-flex flex-column">
-                                <div className="park-img-wrapper">
-                                    <img
-                                        src={safariStyle.image}
-                                        className="card-img-top park-img"
-                                        alt={`${safariStyle.name} image`}
-                                    />
-                                </div>
-
-                                <div className="card-body d-flex flex-column">
-                                    <h5 className="card-title text-center text-uppercase">
-                                        {safariStyle.name}
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+      <section className="safari-style-section py-5 bg-theme-light" ref={ref}>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 mb-4">
+              <h3 className="text-capitalize">
+                3. Which safari style do you prefer?
+              </h3>
+              <p>
+                Tell us your preferences, and we’ll create your dream safari.
+              </p>
             </div>
-        </section>
+
+            {safariStyles.map((style) => (
+              <div key={style.id} className="col-sm-6 col-lg-3 mb-4 d-flex">
+                <div
+                  className="card shadow park-card h-100 d-flex flex-column"
+                  onClick={() => handleStyleClick(style.id)}
+                  style={{ cursor: "pointer" }}
+                >
+                  {/* IMAGE */}
+                  <div className="park-img-wrapper position-relative">
+                    <img
+                      src={style.image}
+                      className="card-img-top park-img"
+                      alt={style.name}
+                    />
+
+                    {isStyleSelected(style.id) && (
+                      <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                        style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
+                      >
+                        <div
+                          style={{
+                            width: 70,
+                            height: 70,
+                            backgroundColor: "#f8f9faa8",
+                            borderRadius: "50%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <Check size={50} strokeWidth={4} color="#d87028" />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* TEXT */}
+                  <div
+                    className="card-body text-center"
+                    style={{
+                      backgroundColor: isStyleSelected(style.id),
+                        
+                      color: isStyleSelected(style.id),
+                      transition: "all 0.3s ease",
+                    }}
+                  >
+                    <h5 className="text-uppercase mb-0">{style.name}</h5>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     );
-});
+  }
+);
 
 export default SafariStyle;

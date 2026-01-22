@@ -24,9 +24,9 @@ const HeroSection = ({scrollToParks }) => {
                     Your Tanzania Safari Begins Here
                 </h1>
 
-                <h5 className="fw-bold mt-4 d-none d-md-block">
+                <p className="fw-bold mt-4 d-none d-md-block text-white">
                     From stunning national parks to majestic mountains and pristine white sand beaches
-                </h5>
+                </p>
 
                 <button
                     id="scrollDownButton"

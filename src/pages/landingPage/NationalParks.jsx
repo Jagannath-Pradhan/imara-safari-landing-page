@@ -1,6 +1,8 @@
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
+import { Check } from "lucide-react";
 
 const NationalParks = forwardRef((props, ref) => {
+    const [selectedParks, setSelectedParks] = useState([]);
 
     const parks = [
         {
@@ -61,8 +63,20 @@ const NationalParks = forwardRef((props, ref) => {
         }
     ];
 
+    const handleParkClick = (parkId) => {
+        setSelectedParks((prev) => {
+            if (prev.includes(parkId)) {
+                return prev.filter((id) => id !== parkId);
+            } else {
+                return [...prev, parkId];
+            }
+        });
+    };
+
+    const isParkSelected = (parkId) => selectedParks.includes(parkId);
+
     return (
-        <section className="national-parks-section py-5 bg-theme-light" ref={ref}>
+        <section className="national-parks-section py-5 bg-theme-light" ref={ref} >
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
@@ -74,26 +88,72 @@ const NationalParks = forwardRef((props, ref) => {
                             If you would like advice, please choose the last option.
                         </p>
                     </div>
-
                     {parks.map((park) => (
                         <div
                             key={park.id}
                             className="col-sm-6 col-lg-3 mb-4 d-flex"
                         >
-                            <div className="card shadow park-card h-100 d-flex flex-column">
-                                <div className="park-img-wrapper">
+                            <div
+                                className="card shadow h-100 d-flex flex-column park-card"
+                                onClick={() => handleParkClick(park.id)}
+                            >
+                                {/* <div className="position-relative" style={{ height: "200px", overflow: "hidden" }}> */}
+                                <div className="park-img-wrapper position-relative">
                                     <img
                                         src={park.image}
-                                        className="card-img-top park-img"
+                                        className="w-100 h-100 park-img"
                                         alt={`${park.name} image`}
+                                        style={{ objectFit: "cover" }}
                                     />
-                                </div>
 
-                                <div className="card-body d-flex flex-column">
-                                    <h5 className="card-title text-center text-uppercase">
+                                    {/* Overlay layer when selected */}
+                                    {isParkSelected(park.id) && (
+                                        <div
+                                            className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                            style={{
+                                                // backgroundColor: "rgba(255, 255, 255, 0.7)",
+                                                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                                                transition: "all 0.3s ease"
+                                            }}
+                                        >
+                                            <div
+                                                style={{
+                                                    width: "70px",
+                                                    height: "70px",
+                                                    backgroundColor: "#f8f9faa8",
+                                                    borderRadius: "50%",
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                    boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
+                                                }}
+                                            >
+                                                <Check
+                                                    size={50}
+                                                    strokeWidth={5}
+                                                    style={{
+                                                        color: "#d87028",
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                                <div
+                                    className="card-body d-flex flex-column"
+                                >
+                                    <h5 className="card-title text-center text-uppercase mb-3" style={{
+                                        fontSize: "1.1rem",
+                                        fontWeight: "600",
+                                        letterSpacing: "0.5px"
+                                    }}>
                                         {park.name}
                                     </h5>
-                                    <p className="card-text">
+                                    <p className="card-text text-center" style={{
+                                        fontSize: "0.9rem",
+                                        lineHeight: "1.5",
+                                        margin: 0
+                                    }}>
                                         {park.description}
                                     </p>
                                 </div>

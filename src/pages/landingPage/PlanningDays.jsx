@@ -1,4 +1,9 @@
-const PlanningDays = ({scrollToSafariStyle }) => {
+import { useState } from "react";
+import { Check } from "lucide-react";
+
+const PlanningDays = ({ scrollToSafariStyle }) => {
+    const [selectedDay, setSelectedDay] = useState(null);
+
     const days = [
         {
             id: 1,
@@ -22,6 +27,13 @@ const PlanningDays = ({scrollToSafariStyle }) => {
         }
     ];
 
+    const handleDayClick = (dayId) => {
+        setSelectedDay(dayId);
+        scrollToSafariStyle(); //  keep existing behavior
+    };
+
+    const isDaySelected = (dayId) => selectedDay === dayId;
+
     return (
         <section className="planning-days-section py-5">
             <div className="container">
@@ -40,13 +52,47 @@ const PlanningDays = ({scrollToSafariStyle }) => {
                             key={day.id}
                             className="col-sm-6 col-lg-3 mb-4 d-flex"
                         >
-                            <div className="card shadow park-card h-100 d-flex flex-column" onClick={scrollToSafariStyle}>
-                                <div className="park-img-wrapper">
+                            <div
+                                className="card shadow park-card h-100 d-flex flex-column"
+                                onClick={() => handleDayClick(day.id)}
+                                style={{ cursor: "pointer" }}
+                            >
+                                <div className="park-img-wrapper position-relative">
                                     <img
                                         src={day.image}
                                         className="card-img-top park-img"
                                         alt={`${day.name} image`}
                                     />
+
+                                    {/* Tick overlay when selected */}
+                                    {isDaySelected(day.id) && (
+                                        <div
+                                            className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                            style={{
+                                                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                                                transition: "all 0.3s ease"
+                                            }}
+                                        >
+                                            <div
+                                                style={{
+                                                    width: "70px",
+                                                    height: "70px",
+                                                    backgroundColor: "#f8f9faa8",
+                                                    borderRadius: "50%",
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                    boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
+                                                }}
+                                            >
+                                                <Check
+                                                    size={50}
+                                                    strokeWidth={4}
+                                                    style={{ color: "#d87028" }}
+                                                />
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
 
                                 <div className="card-body d-flex flex-column">

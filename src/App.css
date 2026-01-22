@@ -143,8 +143,19 @@ h5 {
 /* national parks section end */
 
 
+/* planning safari start */
+
+.alert-bg-theme {
+    background-color: #faeee5 !important;
+}
+
+/* planning safari end */
+
 
 /* contact information start */
+.contact-information-section input, .contact-information-section select{
+    padding: 12px 12px !important;
+}
 
 .security-message {
     color: #2a7f62;

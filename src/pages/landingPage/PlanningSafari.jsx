@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const PlanningSafari = () => {
+const PlanningSafari = ({ scrollToContactInformation }) => {
     const [selectedDate, setSelectedDate] = useState(null);
     const [view, setView] = useState('year'); // 'year' or 'month'
     const [currentYear, setCurrentYear] = useState(2026);
@@ -34,20 +34,21 @@ const PlanningSafari = () => {
     };
 
     const handleDateClick = (day) => {
-        // Check if the date is in the past
         if (
             currentYear === currentYearToday &&
             selectedMonth === currentMonth &&
             day < currentDate
         ) {
-            return; // Don't allow selection of past dates
+            return;
         }
 
         const selected = new Date(currentYear, selectedMonth, day);
         setSelectedDate(selected);
-        console.log('Selected Date:', selected);
-        // You can handle the selected date here for further processing
+        console.log(selected)
+
+        scrollToContactInformation(); // AUTO SCROLL
     };
+
 
     const getDaysInMonth = (year, month) => {
         return new Date(year, month + 1, 0).getDate();
@@ -86,11 +87,6 @@ const PlanningSafari = () => {
                 currentYear === currentYearToday &&
                 selectedMonth === currentMonth &&
                 day < currentDate;
-
-            // const isToday =
-            //     currentYear === currentYearToday &&
-            //     selectedMonth === currentMonth &&
-            //     day === currentDate;
 
             const isToday =
                 !selectedDate &&
@@ -180,7 +176,7 @@ const PlanningSafari = () => {
                             >
                                 «
                             </button>
-                            <h4 className="mx-4 mb-0" style={{ minWidth: '150px', textAlign: 'center' }}>
+                            <h4 className="mx-4 mb-0" style={{ minWidth: '150px', textAlign: 'center', fontWeight: '600' }}>
                                 {view === 'year' ? currentYear : `${months[selectedMonth]} ${currentYear}`}
                             </h4>
                             <button
@@ -253,25 +249,12 @@ const PlanningSafari = () => {
                                 <div className="mt-4 text-center">
                                     <button
                                         onClick={() => setView('year')}
-                                        className="btn btn-outline-secondary"
+                                        className="btn btn-theme"
                                     >
                                         Back to Months
                                     </button>
                                 </div>
                             </>
-                        )}
-
-                        {selectedDate && (
-                            <div className="mt-4 text-center">
-                                <p className="alert alert-success">
-                                    Selected Date: {selectedDate.toLocaleDateString('en-US', {
-                                        weekday: 'long',
-                                        year: 'numeric',
-                                        month: 'long',
-                                        day: 'numeric',
-                                    })}
-                                </p>
-                            </div>
                         )}
                     </div>
                 </div>
