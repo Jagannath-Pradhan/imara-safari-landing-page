@@ -27,7 +27,15 @@ body {
 
 h1 {
     font-family: "AcuminPro-Black" !important;
-    font-size: 1.8rem !important;
+    font-size: 1.875rem !important;
+}
+
+p {
+    font-family: "Soleil" !important;
+}
+
+h5 {
+    font-family: "AcuminPro-Semibold" !important;
 }
 
 /* utility classes end */
@@ -37,10 +45,10 @@ h1 {
 /* hero section start */
 
 /* desktop */
-.hero-section-container h1 {
+/* .hero-section-container h1 {
   font-size: 3rem;
   font-family: 'AcuminPro-Semibold' !important;
-}
+} */
 
 /* mobile */
 @media (max-width: 576px) {
