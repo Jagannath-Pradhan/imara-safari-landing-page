@@ -1,4 +1,7 @@
-const NationalParks = () => {
+import { forwardRef } from "react";
+
+const NationalParks = forwardRef((props, ref) => {
+
     const parks = [
         {
             id: 1,
@@ -59,7 +62,7 @@ const NationalParks = () => {
     ];
 
     return (
-        <section className="national-parks-section py-5 bg-theme-light">
+        <section className="national-parks-section py-5 bg-theme-light" ref={ref}>
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
@@ -105,6 +108,6 @@ const NationalParks = () => {
             </div>
         </section>
     );
-};
+});
 
 export default NationalParks;

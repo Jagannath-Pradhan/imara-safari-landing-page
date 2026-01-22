@@ -1,6 +1,6 @@
-const HeroSection = () => {
+const HeroSection = ({scrollToParks }) => {
     return (
-        <header className="hero-section-container position-relative text-white">
+        <header className="hero-section-container position-relative text-white" >
             <img
                 src="/images/imara_banner_img.webp"
                 className="img-fluid w-100"
@@ -31,6 +31,7 @@ const HeroSection = () => {
                 <button
                     id="scrollDownButton"
                     className="scroll-button d-none d-md-block"
+                    onClick={scrollToParks}
                 >
                     ▼
                 </button>

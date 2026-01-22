@@ -1,28 +1,32 @@
 /* utility classes start */
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
-  font-family: "Soleil" !important;
-  /* font-family: "AcuminPro" !important; */
+    font-family: "Soleil" !important;
 }
 
 
 .bg-theme-light {
-  background-color: #faeee5 !important;
+    background-color: #faeee5 !important;
 }
 
 .btn-theme {
-  background-color: #d87028 !important;
-  color: white !important;
-  border: none;
-  transition: background-color 0.5s !important;
+    background-color: #d87028 !important;
+    color: white !important;
+    border: none;
+    transition: background-color 0.5s !important;
 
-  &:hover {
-    background-color: black !important;
-  }
+    &:hover {
+        background-color: black !important;
+    }
 }
 
 .text-theme {
-  color: #d87028 !important;
+    color: #d87028 !important;
 }
 
 h1 {
@@ -52,37 +56,39 @@ h5 {
 
 /* mobile */
 @media (max-width: 576px) {
-  .hero-section-container h1 {
-    font-size: 1.5rem;
-  }
+    .hero-section-container h1 {
+        font-size: 1.5rem;
+    }
 }
 
 .hero-text {
-  width: 100%;
-  max-width: 1100px; /* widen text container */
+    width: 100%;
+    max-width: 1100px;
+    /* widen text container */
 }
 
 .hero-text h2 {
-  max-width: 1000px; /* widen h2 specifically */
-  margin: 0 auto;
+    max-width: 1000px;
+    /* widen h2 specifically */
+    margin: 0 auto;
 }
 
 
 .scroll-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 24px;
-  cursor: pointer;
-  background-color: #d87028;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.5s;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #d87028;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.5s;
 
-  &:hover {
-    background-color: blue;
-  }
+    &:hover {
+        background-color: blue;
+    }
 }
 
 /* hero section end */
@@ -91,36 +97,36 @@ h5 {
 /* national parks section start */
 
 .park-card {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  color: #d87028 !important;
-  transition: color 0.5s;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    color: #d87028 !important;
+    transition: color 0.5s;
 
-  &:hover {
-    color: black !important;
-  }
+    &:hover {
+        color: black !important;
+    }
 }
 
 /* Image wrapper */
 .park-img-wrapper {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .national-parks-section .card .card-body p {
-  text-align: center;
+    text-align: center;
 }
 
 /* Image default → zoomed in */
 .park-img {
-  width: 100%;
-  object-fit: contain;
-  transform: scale(1.15);
-  transition: transform 0.6s ease;
+    width: 100%;
+    object-fit: contain;
+    transform: scale(1.15);
+    transition: transform 0.6s ease;
 
-  /* Hover → zoom out */
-  &:hover {
-    transform: scale(1);
-  }
+    /* Hover → zoom out */
+    &:hover {
+        transform: scale(1);
+    }
 }
 
 /* national parks section end */
@@ -130,18 +136,18 @@ h5 {
 /* contact information start */
 
 .security-message {
-  color: #2a7f62;
-  font-size: 17px;
-  margin-top: 10px;
-  padding: 0 10px;
-  padding-top: 0.5rem;
-  border-left: 4px solid #2a7f62;
-  background-color: #f3fef7;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
+    color: #2a7f62;
+    font-size: 17px;
+    margin-top: 10px;
+    padding: 0 10px;
+    padding-top: 0.5rem;
+    border-left: 4px solid #2a7f62;
+    background-color: #f3fef7;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
 /* contact information end */
@@ -255,6 +261,7 @@ h5 {
         font-size: 1.3rem;
     }
 }
+
 /* benefits section end */
 
 
@@ -408,23 +415,23 @@ h5 {
 /* experiences section start */
 /* default (mobile & tablet) */
 .experience-img-wrapper img {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* lg screens and above */
 @media (min-width: 992px) {
-  .experience-img-wrapper {
-    height: 220px;
-    overflow: hidden;
-  }
-  
-  .experience-img-wrapper img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
+    .experience-img-wrapper {
+        height: 220px;
+        overflow: hidden;
+    }
+
+    .experience-img-wrapper img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 /* experiences section end */

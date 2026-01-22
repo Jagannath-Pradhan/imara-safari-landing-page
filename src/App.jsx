@@ -10,13 +10,20 @@ import PlanningDays from './components/PlanningDays'
 import PlanningSafari from './components/PlanningSafari'
 import SafariStyle from './components/SafariStyle'
 import Testimonial from './components/Testimonial'
+import { useRef } from "react";
 
 function App() {
+  const parksRef = useRef(null);
 
   return (
     <>
-      <HeroSection />
-      <NationalParks />
+      {/* <HeroSection />
+      <NationalParks /> */}
+      <HeroSection scrollToParks={() => {
+                parksRef.current?.scrollIntoView({ behavior: "smooth" });
+            }} />
+
+            <NationalParks ref={parksRef} />
       <PlanningDays />
       <SafariStyle />
       <PlanningSafari />
