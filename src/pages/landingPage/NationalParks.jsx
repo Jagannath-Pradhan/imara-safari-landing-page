@@ -8,56 +8,56 @@ const NationalParks = forwardRef((props, ref) => {
             name: "Serengeti",
             image: "/images/national-parks/serengeti.webp",
             description:
-                "The Serengeti is synonymous with incredible safaris and is perfect for exciting game drives.",
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
         },
         {
             id: 2,
             name: "Ngorongoro Crater",
             image: "/images/national-parks/ngorongoro-crater.webp",
             description:
-                "A unique safari destination that offers excellent opportunities for wildlife viewing.",
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
         },
         {
             id: 3,
             name: "Tarangire",
             image: "/images/national-parks/tarangire.webp",
             description:
-                "A diverse wilderness of riverine forests, swamps, and mixed woodlands featuring the famous baobab trees.",
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
         },
         {
             id: 4,
             name: "Lake Manyara",
             image: "/images/national-parks/lake-manyara.webp",
             description:
-                "Part of the famous Northern Safari Circuit and offers excellent opportunities to spot wildlife in a diverse landscape.",
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
         },
         {
             id: 5,
             name: "Arusha",
             image: "/images/national-parks/arusha.webp",
             description:
-                "A popular excursion destination near the city of Arusha, featuring diverse landscapes.",
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
         },
         {
             id: 6,
             name: "Kilimanjaro",
             image: "/images/national-parks/kilimanjaro.webp",
             description:
-                "Whether you admire its impressive height or long to climb its icy summit, Mount Kilimanjaro will fascinate you from every perspective.",
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
         },
         {
             id: 7,
             name: "Zanzibar",
             image: "/images/national-parks/zanzibar.webp",
             description:
-                "A stunning beach destination for relaxation and exploration.",
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
         },
         {
             id: 8,
             name: "Not Sure / Other",
             image: "/images/national-parks/not-sure.webp",
             description:
-                "If you’re interested in other national parks or are not yet certain about your destinations, our experts will be happy to create a tailor-made travel plan for you.",
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaeratn for you.",
         }
     ];
 
@@ -66,9 +66,9 @@ const NationalParks = forwardRef((props, ref) => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
-                        <h2 className="text-capitalize">
+                        <h3 className="text-capitalize">
                             1. Which national parks would you like to visit?
-                        </h2>
+                        </h3>
                         <p>
                             Please select the national parks in Tanzania that you would like to visit.
                             If you would like advice, please choose the last option.
@@ -93,7 +93,7 @@ const NationalParks = forwardRef((props, ref) => {
                                     <h5 className="card-title text-center text-uppercase">
                                         {park.name}
                                     </h5>
-                                    <p className="card-text ">
+                                    <p className="card-text">
                                         {park.description}
                                     </p>
                                 </div>

@@ -17,65 +17,64 @@ const Experiences = () => {
                 <div className="row g-4 mb-4">
                     <div className="col-12 col-lg-2">
                         <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-1.jpg" alt="" />
+                            <img src="./images/experiences/experience-fig-1.jpg" alt="experience-imgs" />
                         </div>
                     </div>
 
                     <div className="col-12 col-lg-2">
                         <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-2.jpg" alt="" />
+                            <img src="./images/experiences/experience-fig-2.jpg" alt="experience-imgs" />
                         </div>
                     </div>
 
                     <div className="col-12 col-lg-3">
                         <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-3.webp" alt="" />
+                            <img src="./images/experiences/experience-fig-3.jpg" alt="experience-imgs" />
                         </div>
                     </div>
 
                     <div className="col-12 col-lg-3">
                         <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-4.webp" alt="" />
+                            <img src="./images/experiences/experience-fig-4.jpg" alt="experience-imgs" />
                         </div>
                     </div>
 
                     <div className="col-12 col-lg-2">
                         <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-5.webp" alt="" />
+                            <img src="./images/experiences/experience-fig-5.jpg" alt="experience-imgs" />
                         </div>
                     </div>
 
                     <div className="col-12 col-lg-2">
                         <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-6.webp" alt="" />
+                            <img src="./images/experiences/experience-fig-6.webp" alt="experience-imgs" />
                         </div>
                     </div>
 
                     <div className="col-12 col-lg-3">
                         <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-7.webp" alt="" />
+                            <img src="./images/experiences/experience-fig-7.jpg" alt="experience-imgs" />
                         </div>
                     </div>
 
                     <div className="col-12 col-lg-3">
                         <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-8.webp" alt="" />
+                            <img src="./images/experiences/experience-fig-8.jpg" alt="experience-imgs" />
                         </div>
                     </div>
 
                     <div className="col-12 col-lg-2">
                         <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-9.jpg" alt="" />
+                            <img src="./images/experiences/experience-fig-9.jpg" alt="experience-imgs" />
                         </div>
                     </div>
 
                     <div className="col-12 col-lg-2">
                         <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-10.jpg" alt="" />
+                            <img src="./images/experiences/experience-fig-10.jpg" alt="experience-imgs" />
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     );

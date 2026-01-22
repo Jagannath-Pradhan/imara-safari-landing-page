@@ -27,9 +27,9 @@ const PlanningDays = ({scrollToSafariStyle }) => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
-                        <h2 className="text-capitalize">
+                        <h3 className="text-capitalize">
                             2. How many days are you planning for your Tanzania safari?
-                        </h2>
+                        </h3>
                         <p>
                             Select the duration that best fits your schedule and interests.
                         </p>

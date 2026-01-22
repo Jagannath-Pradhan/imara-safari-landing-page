@@ -6,9 +6,9 @@ const ContactInformation = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
-                        <h2 className="text-capitalize">
+                        <h3 className="text-capitalize">
                             5. Contact Information
-                        </h2>
+                        </h3>
                         <p>
                             We will send you offers via email. Your contact information will remain confidential and will only be used for <span className="fw-bold">safari offers in Tanzania.</span>
                         </p>

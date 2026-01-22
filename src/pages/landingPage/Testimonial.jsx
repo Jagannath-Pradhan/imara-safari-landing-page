@@ -1,10 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
-// import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
+
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 
 const Testimonial = () => {
     const testimonials = [
@@ -12,7 +11,7 @@ const Testimonial = () => {
             id: 1,
             rating: 5,
             title: "What an Experience!",
-            review: "We went on our 5-day/4-night safari with Fahamu Safaris in January 2023, starting in Arusha and then visiting Tarangire (1 day), Lake Manyara (1 day), Serengeti (2 days), and the Ngorongoro Crater. We had an absolutely wonderful experience.",
+            review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaeratSerengeti (2 days), and the Ngorongoro Crater. We had an absolutely wonderful experience.",
             name: "Roman K.",
             date: "January 2023",
             image: "./images/testimonials/testimonial-1.jpg"
@@ -21,7 +20,7 @@ const Testimonial = () => {
             id: 2,
             rating: 5,
             title: "One of the Best Experiences of My Life! Memories Forever!",
-            review: "My family and I went on a four-day safari with Fahamu Safari and had the best time of our lives. We truly made memories for a lifetime. This was thanks to having the best guide and driver we could have ever wished for.",
+            review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaeratto having the best guide and driver we could have ever wished for.",
             name: "Melissa Y.",
             date: "January 2023",
             image: "./images/testimonials/testimonial-2.jpg"
@@ -30,7 +29,7 @@ const Testimonial = () => {
             id: 3,
             rating: 5,
             title: "Amazing Mikumi!",
-            review: "It was such an incredible adventure! We traveled with Mister Ole, who knows everything about the animals, birds, insects, their behaviors, and the entire flora and fauna. We spent 3 days in Mikumi National Park in Tanzania.",
+            review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaeratentire flora and fauna. We spent 3 days in Mikumi National Park in Tanzania.",
             name: "Karolina S.",
             date: "November 2022",
             image: "./images/testimonials/testimonial-3.jpg"
@@ -38,7 +37,7 @@ const Testimonial = () => {
     ];
 
     return (
-        <section className="testimonial-section bg-theme-light">
+        <section className="testimonial-section bg-theme-light py-5">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -49,10 +48,7 @@ const Testimonial = () => {
                                 delay: 5000,
                                 disableOnInteraction: false,
                             }}
-                            // pagination={{
-                            //     clickable: true,
-                            // }}
-                            modules={[Autoplay, Pagination, Navigation]}
+                            modules={[Autoplay, Navigation]}
                             className="testimonial-swiper"
                         >
                             {testimonials.map((testimonial) => (

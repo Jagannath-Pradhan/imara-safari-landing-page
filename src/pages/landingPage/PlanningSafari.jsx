@@ -27,9 +27,9 @@ const PlanningSafari = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
-                        <h2 className="text-capitalize">
+                        <h3 className="text-capitalize">
                             4. When Are You Planning Your Safari?
-                        </h2>
+                        </h3>
                         <p>
                             Please let us know your travel dates. If they are not yet fixed, please provide your approximate travel period.
                         </p>

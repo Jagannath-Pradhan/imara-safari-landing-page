@@ -30,9 +30,9 @@ import { forwardRef } from "react";
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
-                        <h2 className="text-capitalize">
+                        <h3 className="text-capitalize">
                             3. Which safari style do you prefer?
-                        </h2>
+                        </h3>
                         <p>
                             Tell us your preferences, and we’ll create your dream safari.
                         </p>
