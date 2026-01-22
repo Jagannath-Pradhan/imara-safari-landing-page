@@ -6,14 +6,10 @@ const ContactInformation = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
-                        <h1 className="text-capitalize" style={{ 
-                            fontSize: '2rem', 
-                            fontWeight: '600',
-                            color: '#212529'
-                        }}>
+                        <h2 className="text-capitalize">
                             5. Contact Information
-                        </h1>
-                        <p className="text-secondary fs-5">
+                        </h2>
+                        <p>
                             We will send you offers via email. Your contact information will remain confidential and will only be used for <span className="fw-bold">safari offers in Tanzania.</span>
                         </p>
                     </div>

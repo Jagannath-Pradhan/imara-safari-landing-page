@@ -27,17 +27,10 @@ const PlanningSafari = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
-                        <h1 className="text-capitalize" style={{ 
-                            fontSize: '2rem', 
-                            fontWeight: '600',
-                            color: '#212529'
-                        }}>
+                        <h2 className="text-capitalize">
                             4. When Are You Planning Your Safari?
-                        </h1>
-                        <p style={{ 
-                            fontSize: '1.1rem',
-                            color: '#6c757d'
-                        }}>
+                        </h2>
+                        <p>
                             Please let us know your travel dates. If they are not yet fixed, please provide your approximate travel period.
                         </p>
                     </div>

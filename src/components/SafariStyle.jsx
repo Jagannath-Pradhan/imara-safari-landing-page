@@ -1,4 +1,7 @@
-const SafariStyle = () => {
+import { forwardRef } from "react";
+
+// const SafariStyle = () => {
+    const SafariStyle = forwardRef((props, ref) => {
     const safariStyles = [
         {
             id: 1,
@@ -23,18 +26,14 @@ const SafariStyle = () => {
     ];
 
     return (
-        <section className="safari-style-section py-5 bg-theme-light">
+        <section className="safari-style-section py-5 bg-theme-light" ref={ref}>
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
-                        <h1 className="text-capitalize" style={{ 
-                            fontSize: '2rem', 
-                            fontWeight: '600',
-                            color: '#212529'
-                        }}>
+                        <h2 className="text-capitalize">
                             3. Which safari style do you prefer?
-                        </h1>
-                        <p className="text-secondary fs-5">
+                        </h2>
+                        <p>
                             Tell us your preferences, and we’ll create your dream safari.
                         </p>
                     </div>
@@ -65,6 +64,6 @@ const SafariStyle = () => {
             </div>
         </section>
     );
-};
+});
 
 export default SafariStyle;

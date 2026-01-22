@@ -1,4 +1,4 @@
-const PlanningDays = () => {
+const PlanningDays = ({scrollToSafariStyle }) => {
     const days = [
         {
             id: 1,
@@ -27,14 +27,10 @@ const PlanningDays = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
-                        <h1 className="text-capitalize" style={{ 
-                            fontSize: '2rem', 
-                            fontWeight: '600',
-                            color: '#212529'
-                        }}>
+                        <h2 className="text-capitalize">
                             2. How many days are you planning for your Tanzania safari?
-                        </h1>
-                        <p className="text-secondary fs-5">
+                        </h2>
+                        <p>
                             Select the duration that best fits your schedule and interests.
                         </p>
                     </div>
@@ -44,7 +40,7 @@ const PlanningDays = () => {
                             key={day.id}
                             className="col-sm-6 col-lg-3 mb-4 d-flex"
                         >
-                            <div className="card shadow park-card h-100 d-flex flex-column">
+                            <div className="card shadow park-card h-100 d-flex flex-column" onClick={scrollToSafariStyle}>
                                 <div className="park-img-wrapper">
                                     <img
                                         src={day.image}

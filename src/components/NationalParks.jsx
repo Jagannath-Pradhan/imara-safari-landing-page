@@ -66,14 +66,10 @@ const NationalParks = forwardRef((props, ref) => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
-                        <h1 className="text-capitalize" style={{ 
-                            fontSize: '2rem', 
-                            fontWeight: '600',
-                            color: '#212529'
-                        }}>
+                        <h2 className="text-capitalize">
                             1. Which national parks would you like to visit?
-                        </h1>
-                        <p className="text-secondary fs-5">
+                        </h2>
+                        <p>
                             Please select the national parks in Tanzania that you would like to visit.
                             If you would like advice, please choose the last option.
                         </p>
@@ -97,7 +93,7 @@ const NationalParks = forwardRef((props, ref) => {
                                     <h5 className="card-title text-center text-uppercase">
                                         {park.name}
                                     </h5>
-                                    <p className="card-text text-secondary">
+                                    <p className="card-text ">
                                         {park.description}
                                     </p>
                                 </div>

@@ -4,14 +4,10 @@ const Experiences = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4 text-center">
-                        <h1 className="text-capitalize" style={{ 
-                            fontSize: '2rem', 
-                            fontWeight: '600',
-                            color: '#212529'
-                        }}>
+                        <h2 className="text-capitalize">
                             EXPERIENCE TANZANIA LIKE NEVER BEFORE
-                        </h1>
-                        <p className="text-secondary fs-5">
+                        </h2>
+                        <p>
                             Be inspired by the travel experiences of our customers and discover
                             the heart of Africa. With us, your dream of a Tanzania trip becomes a reality!
                         </p>

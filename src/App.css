@@ -31,11 +31,18 @@ body {
 
 h1 {
     font-family: "AcuminPro-Black" !important;
+    /* font-size: 1.875rem !important; */
+    font-size: 3rem !important;
+}
+
+h2 {
+    font-family: "AcuminPro-Black" !important;
     font-size: 1.875rem !important;
 }
 
 p {
     font-family: "Soleil" !important;
+    color: #444 !important;
 }
 
 h5 {

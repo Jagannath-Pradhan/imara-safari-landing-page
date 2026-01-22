@@ -14,18 +14,27 @@ import { useRef } from "react";
 
 function App() {
   const parksRef = useRef(null);
+  const safariStyleRef = useRef(null);
+
+  const scrollToSafariStyle = () => {
+    safariStyleRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
       {/* <HeroSection />
       <NationalParks /> */}
       <HeroSection scrollToParks={() => {
-                parksRef.current?.scrollIntoView({ behavior: "smooth" });
-            }} />
+        parksRef.current?.scrollIntoView({ behavior: "smooth" });
+      }} />
 
-            <NationalParks ref={parksRef} />
-      <PlanningDays />
-      <SafariStyle />
+      <NationalParks ref={parksRef} />
+      {/* <PlanningDays />
+      <SafariStyle /> */}
+      <PlanningDays scrollToSafariStyle={scrollToSafariStyle} />
+      <SafariStyle ref={safariStyleRef} />
       <PlanningSafari />
       <ContactInformation />
       <Benefits />
