@@ -79,12 +79,7 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
 
     return (
         <>
-            <style>
-                {`  
-                    
-                `}
-            </style>
-            <section className="national-parks-section py-5 bg-theme-light" ref={ref}>
+            <section className="national-parks-section py-lg-5 py-4 bg-theme-light" ref={ref}>
                 <div className="container">
                     <div className="row">
                         <div className="col-12 mb-4">
@@ -99,7 +94,7 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
                         {parks.map((park) => (
                             <div
                                 key={park.id}
-                                className="col-sm-6 col-lg-3 mb-4 d-flex"
+                                className="col-6 col-lg-3 mb-4 d-flex"
                             >
                                 <div
                                     className={`card shadow h-100 d-flex flex-column park-card ${selectedParks.includes(park.name) ? 'selected' : ''}`}
@@ -145,7 +140,7 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
                                             </div>
                                         )}
                                     </div>
-                                    
+
                                     {/* Card Body with Sliding Layer Effect */}
                                     <div className="park-card-body-wrapper">
                                         <div className="card-body d-flex flex-column">
@@ -164,7 +159,7 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
                                                 {park.description}
                                             </p>
                                         </div>
-                                        
+
                                         {/* Sliding overlay on card-body */}
                                         <div className="card-body-overlay">
                                             <div className="overlay-text-content">

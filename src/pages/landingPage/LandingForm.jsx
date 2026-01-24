@@ -155,7 +155,7 @@ const LandingForm = () => {
 
 
     return (
-        <>
+        <div>
             <HeroSection scrollToParks={() => parksRef.current?.scrollIntoView({ behavior: "smooth" })} />
 
             <NationalParks
@@ -184,7 +184,7 @@ const LandingForm = () => {
             <div ref={contactInfoRef}>
                 <ContactInformation onSubmit={handleFinalSubmit} submitError={submitError} />
             </div>
-        </>
+        </div>
     );
 };
 

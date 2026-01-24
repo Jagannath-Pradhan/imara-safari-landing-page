@@ -31,10 +31,10 @@ const Benefits = () => {
     ];
 
     return (
-        <section className="benefits-section py-5">
+        <section className="benefits-section py-lg-5 py-4">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 mb-5 text-center">
+                    <div className="col-12 mb-lg-5 mb-1 text-center">
                         <h3 className="text-capitalize text-theme" style={{ letterSpacing: "1px", lineHeight: "1" }}>
                             Your Benefits
                         </h3>
@@ -44,10 +44,10 @@ const Benefits = () => {
                     </div>
                 </div>
 
-                <div className="row g-4">
+                <div className="row g-lg-4 g-2">
                     {benefitsData.map((benefit) => (
                         <div key={benefit.id} className="col-lg-6 col-md-6">
-                            <div className="benefit-card d-flex align-items-start">
+                            <div className="benefit-card d-flex align-items-lg-start">
                                 <div className="benefit-icon-wrapper">
                                     <div className="benefit-icon">
                                         <img

@@ -34,14 +34,30 @@ h1 {
     font-size: 3rem !important;
 }
 
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem !important;
+    }
+}
+
 h2 {
     font-family: "AcuminPro-Black" !important;
-    font-size: 2.75rem !important;
+    /* font-size: 2.75rem !important; */
 }
 
 h3 {
     font-family: "AcuminPro-Black" !important;
     font-size: 1.875rem !important;
+}
+
+@media (max-width: 576px) {
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    p {
+        font-size: 0.8rem !important;
+    }
 }
 
 p {
@@ -189,6 +205,31 @@ h5 {
     }
 }
 
+/* MOBILE ONLY */
+@media (max-width: 767.98px) {
+  /* Hide description text */
+  .park-card .card-text {
+    display: none;
+  }
+
+  /* Hide sliding overlay entirely */
+  .park-card .card-body-overlay {
+    display: none;
+  }
+
+  /* Reduce padding for compact look */
+  .park-card .card-body {
+    padding: 0.75rem;
+  }
+
+  /* Slightly smaller title */
+  .park-card .card-title {
+    font-size: 0.95rem;
+    margin-bottom: 0 !important;
+  }
+}
+
+
 /* national parks section end */
 
 
@@ -220,6 +261,18 @@ h5 {
     align-items: center;
     gap: 8px;
     margin-bottom: 10px;
+}
+
+@media (max-width: 575px) {
+    .contact-information-section .container label, .contact-information-section .container button, .contact-information-section .container input, .contact-information-section .container select, .contact-information-section .container textarea {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .contact-information-section .container button {
+        padding: 14px !important;
+    }
 }
 
 /* contact information end */
@@ -277,6 +330,12 @@ h5 {
     margin-bottom: 15px;
     position: relative;
     padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .benefit-title {
+        margin-top: -15px !important;
+    }
 }
 
 .benefit-title::before {
@@ -501,4 +560,23 @@ h5 {
     }
 }
 
+
+.experience-img-wrapper.fixed-height {
+  height: 260px; /* adjust if needed */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.experience-img-wrapper.fixed-height img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    width: 1rem !important;
+    color: #d87028 !important;
+}
+
 /* experiences section end */
+

@@ -29,7 +29,7 @@ const SafariStyle = forwardRef(
         const isStyleSelected = (styleId) => selectedStyle === styleId;
 
         return (
-            <section className="safari-style-section py-5 bg-theme-light" ref={ref}>
+            <section className="safari-style-section py-lg-5 py-4 bg-theme-light" ref={ref}>
                 <div className="container">
                     <div className="row">
                         <div className="col-12 mb-4">
@@ -42,7 +42,7 @@ const SafariStyle = forwardRef(
                         </div>
 
                         {safariStyles.map((style) => (
-                            <div key={style.id} className="col-sm-6 col-lg-3 mb-4 d-flex">
+                            <div key={style.id} className="col-6 col-lg-3 mb-4 d-flex">
                                 <div
                                     className={`card shadow park-card h-100 d-flex flex-column ${isStyleSelected(style.id) ? "selected" : ""
                                         }`}

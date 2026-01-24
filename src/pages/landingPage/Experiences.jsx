@@ -1,83 +1,78 @@
+import "swiper/css";
+import "swiper/css/navigation";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+
+const images = [
+  "./images/experiences/experience-fig-1.jpg",
+  "./images/experiences/experience-fig-2.jpg",
+  "./images/experiences/experience-fig-3.jpg",
+  "./images/experiences/experience-fig-4.jpg",
+  "./images/experiences/experience-fig-5.jpg",
+  "./images/experiences/experience-fig-6.webp",
+  "./images/experiences/experience-fig-7.jpg",
+  "./images/experiences/experience-fig-8.jpg",
+  "./images/experiences/experience-fig-9.jpg",
+  "./images/experiences/experience-fig-10.jpg",
+];
+
 const Experiences = () => {
-    return (
-        <section className="experiences-section py-5">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 mb-4 text-center">
-                        <h2 className="text-capitalize">
-                            EXPERIENCE TANZANIA LIKE NEVER BEFORE
-                        </h2>
-                        <p>
-                            Be inspired by the travel experiences of our customers and discover
-                            the heart of Africa. With us, your dream of a Tanzania trip becomes a reality!
-                        </p>
-                    </div>
-                </div>
+  return (
+    <section className="experiences-section pt-lg-5 py-4">
+      <div className="container">
+        {/* Heading */}
+        <div className="row">
+          <div className="col-12 mb-lg-4 text-center">
+            <h2 className="text-capitalize">
+              EXPERIENCE TANZANIA LIKE NEVER BEFORE
+            </h2>
+            <p>
+              Be inspired by the travel experiences of our customers and discover
+              the heart of Africa.
+            </p>
+          </div>
+        </div>
 
-                <div className="row g-2 mb-4">
-                    <div className="col-12 col-lg-2">
-                        <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-1.jpg" alt="experience-imgs" />
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-lg-2">
-                        <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-2.jpg" alt="experience-imgs" />
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-lg-3">
-                        <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-3.jpg" alt="experience-imgs" />
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-lg-3">
-                        <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-4.jpg" alt="experience-imgs" />
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-lg-2">
-                        <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-5.jpg" alt="experience-imgs" />
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-lg-2">
-                        <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-6.webp" alt="experience-imgs" />
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-lg-3">
-                        <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-7.jpg" alt="experience-imgs" />
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-lg-3">
-                        <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-8.jpg" alt="experience-imgs" />
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-lg-2">
-                        <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-9.jpg" alt="experience-imgs" />
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-lg-2">
-                        <div className="experience-img-wrapper">
-                            <img src="./images/experiences/experience-fig-10.jpg" alt="experience-imgs" />
-                        </div>
-                    </div>
-                </div>
+        {/* ================= DESKTOP GRID ================= */}
+        <div className="row g-2 mb-4 d-none d-md-flex">
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className={`col-12 col-md-${index % 5 === 2 || index % 5 === 3 ? 3 : 2}`}
+            >
+              <div className="experience-img-wrapper fixed-height">
+                <img src={img} alt="experience" />
+              </div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+
+        {/* ================= MOBILE / TABLET SWIPER ================= */}
+        <div className="d-md-none">
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            slidesPerView={1}
+            spaceBetween={0}
+            navigation
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            loop
+          >
+            {images.map((img, index) => (
+              <SwiperSlide key={index}>
+                <div className="experience-img-wrapper fixed-height">
+                  <img src={img} alt="experience" />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Experiences;

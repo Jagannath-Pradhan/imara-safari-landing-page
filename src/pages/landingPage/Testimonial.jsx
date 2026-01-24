@@ -37,7 +37,7 @@ const Testimonial = () => {
     ];
 
     return (
-        <section className="testimonial-section bg-theme-light py-5">
+        <section className="testimonial-section bg-theme-light py-lg-5 py-4">
             <div className="container">
                 <div className="row">
                     <div className="col-12">

@@ -37,7 +37,7 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
 
     const handleDayClick = (day) => {
         setSelectedDay(day.id);   // UI state
-        onChange(day.name);       // ✅ SEND TO PARENT
+        onChange(day.name);       // SEND TO PARENT
         console.log(day.name)
         scrollToSafariStyle();    // keep existing behavior
     };
@@ -45,7 +45,7 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
     const isDaySelected = (dayId) => selectedDay === dayId;
 
     return (
-        <section className="planning-days-section py-5">
+        <section className="planning-days-section py-lg-5 py-4">
             <div className="container">
                 <div className="row">
                     <div className="col-12 mb-4">
@@ -60,7 +60,7 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
                     {days.map((day) => (
                         <div
                             key={day.id}
-                            className="col-sm-6 col-lg-3 mb-4 d-flex"
+                            className="col-6 col-lg-3 mb-4 d-flex"
                         >
                             <div
                                 className={`card shadow park-card h-100 d-flex flex-column ${isDaySelected(day.id) ? "selected" : ""
