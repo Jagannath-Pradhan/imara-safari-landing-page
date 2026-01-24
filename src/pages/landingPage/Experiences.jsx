@@ -14,7 +14,7 @@ const Experiences = () => {
                     </div>
                 </div>
 
-                <div className="row g-4 mb-4">
+                <div className="row g-2 mb-4">
                     <div className="col-12 col-lg-2">
                         <div className="experience-img-wrapper">
                             <img src="./images/experiences/experience-fig-1.jpg" alt="experience-imgs" />

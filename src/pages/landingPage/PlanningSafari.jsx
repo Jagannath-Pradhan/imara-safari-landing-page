@@ -33,36 +33,20 @@ const PlanningSafari = ({ scrollToContactInformation, onChange }) => {
         setView('month');
     };
 
-    // const handleDateClick = (day) => {
-    //     if (
-    //         currentYear === currentYearToday &&
-    //         selectedMonth === currentMonth &&
-    //         day < currentDate
-    //     ) {
-    //         return;
-    //     }
+    const handleDateClick = (day) => {
+        if (
+            currentYear === currentYearToday &&
+            selectedMonth === currentMonth &&
+            day < currentDate
+        ) return;
 
-    //     const selected = new Date(currentYear, selectedMonth, day);
-    //     setSelectedDate(selected);
-    //     console.log(selected)
+        const selected = new Date(currentYear, selectedMonth, day);
 
-    //     scrollToContactInformation(); // AUTO SCROLL
-    // };
-
-      const handleDateClick = (day) => {
-    if (
-      currentYear === currentYearToday &&
-      selectedMonth === currentMonth &&
-      day < currentDate
-    ) return;
-
-    const selected = new Date(currentYear, selectedMonth, day);
-
-    setSelectedDate(selected);   // UI state
-    onChange(selected.toISOString().split("T")[0]); // SEND DATE
-    console.log(selected.toISOString().split("T")[0]); // SEND DATE
-    scrollToContactInformation();
-  };
+        setSelectedDate(selected);   // UI state
+        onChange(selected.toISOString().split("T")[0]); // SEND DATE
+        console.log(selected.toISOString().split("T")[0]); // SEND DATE
+        scrollToContactInformation();
+    };
 
 
     const getDaysInMonth = (year, month) => {
@@ -162,6 +146,40 @@ const PlanningSafari = ({ scrollToContactInformation, onChange }) => {
         return currentYear === currentYearToday && monthIndex < currentMonth;
     };
 
+    const handleArrowClick = (direction) => {
+        if (view === 'year') {
+            // existing behavior
+            handleYearChange(direction);
+            return;
+        }
+
+        // MONTH VIEW LOGIC
+        let newMonth = selectedMonth + direction;
+        let newYear = currentYear;
+
+        if (newMonth > 11) {
+            newMonth = 0;
+            newYear += 1;
+        }
+
+        if (newMonth < 0) {
+            newMonth = 11;
+            newYear -= 1;
+        }
+
+        // prevent going before current month/year
+        if (
+            newYear < currentYearToday ||
+            (newYear === currentYearToday && newMonth < currentMonth)
+        ) {
+            return;
+        }
+
+        setCurrentYear(newYear);
+        setSelectedMonth(newMonth);
+    };
+
+
     return (
         <div className="container py-5">
             <div className="row">
@@ -181,26 +199,36 @@ const PlanningSafari = ({ scrollToContactInformation, onChange }) => {
 
                         <div className="d-flex justify-content-center align-items-center mb-4">
                             <button
-                                onClick={() => handleYearChange(-1)}
+                                onClick={() => handleArrowClick(-1)}
                                 className="btn btn-link text-dark"
                                 style={{
                                     textDecoration: 'none',
                                     fontSize: '1.2rem',
-                                    visibility: currentYear > currentYearToday ? 'visible' : 'hidden',
+                                    visibility:
+                                        view === 'year'
+                                            ? currentYear > currentYearToday
+                                                ? 'visible'
+                                                : 'hidden'
+                                            : 'visible',
                                 }}
                             >
                                 «
                             </button>
+
                             <h4 className="mx-4 mb-0" style={{ minWidth: '150px', textAlign: 'center', fontWeight: '600' }}>
-                                {view === 'year' ? currentYear : `${months[selectedMonth]} ${currentYear}`}
+                                {view === 'year'
+                                    ? currentYear
+                                    : `${months[selectedMonth]} ${currentYear}`}
                             </h4>
+
                             <button
-                                onClick={() => handleYearChange(1)}
+                                onClick={() => handleArrowClick(1)}
                                 className="btn btn-link text-dark"
                                 style={{ textDecoration: 'none', fontSize: '1.2rem' }}
                             >
                                 »
                             </button>
+
                         </div>
 
                         {view === 'year' ? (

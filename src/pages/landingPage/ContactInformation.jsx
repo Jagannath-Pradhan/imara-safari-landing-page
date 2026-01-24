@@ -67,7 +67,7 @@ const ContactInformation = ({ onSubmit, submitError }) => {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="exampleInputPhone" className="form-label fw-bold">
-                                    Phone Number (Please include the international country code) (optional)
+                                    Phone Number (Please include the international country code)
                                 </label>
 
                                 <div className="d-flex align-items-center gap-3">
