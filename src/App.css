@@ -46,7 +46,7 @@ h3 {
 
 p {
     font-family: "Soleil" !important;
-    color: #444 !important;
+    /* color: #444 !important; */
 }
 
 h5 {
@@ -98,7 +98,8 @@ h5 {
     transition: background-color 0.5s;
 
     &:hover {
-        background-color: blue;
+        /* background-color: #f6751a; */
+        background-color: black;
     }
 }
 
@@ -107,7 +108,7 @@ h5 {
 
 /* national parks section start */
 
-.park-card {
+/* .park-card {
     transition: transform 0.3s ease;
     cursor: pointer;
     color: #d87028 !important;
@@ -116,7 +117,7 @@ h5 {
     &:hover {
         color: black !important;
     }
-}
+} */
 
 /* Image wrapper */
 .park-img-wrapper {
@@ -125,6 +126,74 @@ h5 {
 
 .national-parks-section .card .card-body p {
     text-align: center;
+}
+
+.park-card-body-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* .card-body-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to top, rgba(216, 112, 40, 0.95), rgba(216, 112, 40, 0.90));
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 2;
+} */
+
+.card-body-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(216, 112, 40, 0.95),
+        rgba(216, 112, 40, 0.90)
+    );
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+.park-card.selected .card-body-overlay {
+    transform: translateY(0);
+}
+
+.park-card.selected .card-body {
+    opacity: 0;
+    pointer-events: none;
+}
+/* 
+.park-card.selected .card-body-overlay {
+    height: 100%;
+} */
+
+.overlay-text-content {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease 0.15s;
+    text-align: center;
+    color: white;
+}
+
+.park-card.selected .overlay-text-content {
+    opacity: 1;
+    transform: translateY(0);
+    color: white;
 }
 
 /* Image default → zoomed in */
@@ -153,7 +222,8 @@ h5 {
 
 
 /* contact information start */
-.contact-information-section input, .contact-information-section select{
+.contact-information-section input,
+.contact-information-section select {
     padding: 12px 12px !important;
 }
 

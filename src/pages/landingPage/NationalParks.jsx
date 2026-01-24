@@ -59,7 +59,7 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
             name: "Not Sure / Other",
             image: "/images/national-parks/not-sure.webp",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaeratn for you.",
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaeratn you.",
         }
     ];
 
@@ -78,95 +78,120 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
     }, [selectedParks, onChange]);
 
     return (
-        <section className="national-parks-section py-5 bg-theme-light" ref={ref} >
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 mb-4">
-                        <h3 className="text-capitalize">
-                            1. Which national parks would you like to visit?
-                        </h3>
-                        <p>
-                            Please select the national parks in Tanzania that you would like to visit.
-                            If you would like advice, please choose the last option.
-                        </p>
-                    </div>
-                    {parks.map((park) => (
-                        <div
-                            key={park.id}
-                            className="col-sm-6 col-lg-3 mb-4 d-flex"
-                        >
+        <>
+            <style>
+                {`  
+                    
+                `}
+            </style>
+            <section className="national-parks-section py-5 bg-theme-light" ref={ref}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 mb-4">
+                            <h3 className="text-capitalize">
+                                1. Which national parks would you like to visit?
+                            </h3>
+                            <p>
+                                Please select the national parks in Tanzania that you would like to visit.
+                                If you would like advice, please choose the last option.
+                            </p>
+                        </div>
+                        {parks.map((park) => (
                             <div
-                                className="card shadow h-100 d-flex flex-column park-card"
-                                // onClick={() => handleParkClick(park.id)}
-                                onClick={() => handleParkClick(park.name)}
+                                key={park.id}
+                                className="col-sm-6 col-lg-3 mb-4 d-flex"
                             >
-                                {/* <div className="position-relative" style={{ height: "200px", overflow: "hidden" }}> */}
-                                <div className="park-img-wrapper position-relative">
-                                    <img
-                                        src={park.image}
-                                        className="w-100 h-100 park-img"
-                                        alt={`${park.name} image`}
-                                        style={{ objectFit: "cover" }}
-                                    />
+                                <div
+                                    className={`card shadow h-100 d-flex flex-column park-card ${selectedParks.includes(park.name) ? 'selected' : ''}`}
+                                    onClick={() => handleParkClick(park.name)}
+                                >
+                                    <div className="park-img-wrapper position-relative">
+                                        <img
+                                            src={park.image}
+                                            className="w-100 h-100 park-img"
+                                            alt={`${park.name} image`}
+                                            style={{ objectFit: "cover" }}
+                                        />
 
-                                    {/* Overlay layer when selected */}
-                                    {/* {isParkSelected(park.id) && ( */}
-                                    {selectedParks.includes(park.name) && (
-                                        <div
-                                            className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
-                                            style={{
-                                                // backgroundColor: "rgba(255, 255, 255, 0.7)",
-                                                backgroundColor: "rgba(255, 255, 255, 0.2)",
-                                                transition: "all 0.3s ease"
-                                            }}
-                                        >
+                                        {/* Overlay layer when selected - ONLY ON IMAGE */}
+                                        {selectedParks.includes(park.name) && (
                                             <div
+                                                className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
                                                 style={{
-                                                    width: "70px",
-                                                    height: "70px",
-                                                    backgroundColor: "#f8f9faa8",
-                                                    borderRadius: "50%",
-                                                    display: "flex",
-                                                    alignItems: "center",
-                                                    justifyContent: "center",
-                                                    boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
+                                                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+                                                    transition: "all 0.3s ease"
                                                 }}
                                             >
-                                                <Check
-                                                    size={50}
-                                                    strokeWidth={5}
+                                                <div
                                                     style={{
-                                                        color: "#d87028",
+                                                        width: "70px",
+                                                        height: "70px",
+                                                        backgroundColor: "#f8f9faa8",
+                                                        borderRadius: "50%",
+                                                        display: "flex",
+                                                        alignItems: "center",
+                                                        justifyContent: "center",
+                                                        boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
                                                     }}
-                                                />
+                                                >
+                                                    <Check
+                                                        size={50}
+                                                        strokeWidth={5}
+                                                        style={{
+                                                            color: "#d87028",
+                                                        }}
+                                                    />
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                    
+                                    {/* Card Body with Sliding Layer Effect */}
+                                    <div className="park-card-body-wrapper">
+                                        <div className="card-body d-flex flex-column">
+                                            <h5 className="card-title text-center text-uppercase mb-3" style={{
+                                                fontSize: "1.1rem",
+                                                fontWeight: "600",
+                                                letterSpacing: "0.5px"
+                                            }}>
+                                                {park.name}
+                                            </h5>
+                                            <p className="card-text text-center" style={{
+                                                fontSize: "0.9rem",
+                                                lineHeight: "1.5",
+                                                margin: 0
+                                            }}>
+                                                {park.description}
+                                            </p>
+                                        </div>
+                                        
+                                        {/* Sliding overlay on card-body */}
+                                        <div className="card-body-overlay">
+                                            <div className="overlay-text-content">
+                                                <h5 className="text-uppercase mb-2" style={{
+                                                    fontSize: "1.1rem",
+                                                    fontWeight: "600",
+                                                    letterSpacing: "0.5px"
+                                                }}>
+                                                    {park.name}
+                                                </h5>
+                                                <p style={{
+                                                    fontSize: "0.9rem",
+                                                    lineHeight: "1.5",
+                                                    margin: 0
+                                                }}>
+                                                    {park.description}
+                                                </p>
                                             </div>
                                         </div>
-                                    )}
-                                </div>
-                                <div
-                                    className="card-body d-flex flex-column"
-                                >
-                                    <h5 className="card-title text-center text-uppercase mb-3" style={{
-                                        fontSize: "1.1rem",
-                                        fontWeight: "600",
-                                        letterSpacing: "0.5px"
-                                    }}>
-                                        {park.name}
-                                    </h5>
-                                    <p className="card-text text-center" style={{
-                                        fontSize: "0.9rem",
-                                        lineHeight: "1.5",
-                                        margin: 0
-                                    }}>
-                                        {park.description}
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 });
 

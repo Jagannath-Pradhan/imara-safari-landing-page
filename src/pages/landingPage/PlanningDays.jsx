@@ -63,7 +63,8 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
                             className="col-sm-6 col-lg-3 mb-4 d-flex"
                         >
                             <div
-                                className="card shadow park-card h-100 d-flex flex-column"
+                                className={`card shadow park-card h-100 d-flex flex-column ${isDaySelected(day.id) ? "selected" : ""
+                                    }`}
                                 onClick={() => handleDayClick(day)}
                                 style={{ cursor: "pointer" }}
                             >
@@ -74,7 +75,7 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
                                         alt={`${day.name} image`}
                                     />
 
-                                    {/* Tick overlay when selected */}
+                                    {/* Image overlay with tick */}
                                     {isDaySelected(day.id) && (
                                         <div
                                             className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
@@ -95,22 +96,28 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
                                                     boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
                                                 }}
                                             >
-                                                <Check
-                                                    size={50}
-                                                    strokeWidth={4}
-                                                    style={{ color: "#d87028" }}
-                                                />
+                                                <Check size={50} strokeWidth={4} style={{ color: "#d87028" }} />
                                             </div>
                                         </div>
                                     )}
                                 </div>
 
-                                <div className="card-body d-flex flex-column">
-                                    <h5 className="card-title text-center text-uppercase">
-                                        {day.name}
-                                    </h5>
+                                {/* SAME BODY OVERLAY STRUCTURE AS NationalParks */}
+                                <div className="park-card-body-wrapper">
+                                    <div className="card-body d-flex flex-column justify-content-center">
+                                        <h5 className="card-title text-center text-uppercase">
+                                            {day.name}
+                                        </h5>
+                                    </div>
+
+                                    <div className="card-body-overlay">
+                                        <div className="overlay-text-content">
+                                            <h5 className="text-uppercase">{day.name}</h5>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     ))}
                 </div>

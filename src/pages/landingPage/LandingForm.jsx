@@ -5,66 +5,121 @@ import PlanningDays from './PlanningDays';
 import SafariStyle from './SafariStyle';
 import PlanningSafari from './PlanningSafari';
 import ContactInformation from './ContactInformation';
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const LandingForm = () => {
-  const parksRef = useRef(null);
-  const safariStyleRef = useRef(null);
-  const planningSafariRef = useRef(null);
-  const contactInfoRef = useRef(null);
+    const parksRef = useRef(null);
+    const safariStyleRef = useRef(null);
+    const planningSafariRef = useRef(null);
+    const contactInfoRef = useRef(null);
+    const [submitError, setSubmitError] = useState("");
+    const navigate = useNavigate();
 
-  // CENTRAL FORM STATE
-  const [formData, setFormData] = useState({
-    parks: [],
-    planningDays: "",
-    safariStyle: "",
-    travelDate: null,
-    contact: {}
-  });
+    // CENTRAL FORM STATE
+    const [formData, setFormData] = useState({
+        parks: [],
+        planningDays: "",
+        safariStyle: "",
+        travelDate: null,
+        contact: {}
+    });
 
-  const updateFormData = (key, value) => {
-    setFormData(prev => ({ ...prev, [key]: value }));
-  };
+    const validateBeforeSubmit = (contactData) => {
 
-  const handleFinalSubmit = (contactData) => {
-    const finalData = {
-      ...formData,
-      contact: contactData
+        if (!formData.parks || formData.parks.length === 0) {
+            return "Error ! Please Check Which Parks Do You Want To Visit...!!!!!!";
+        }
+
+        if (!formData.planningDays) {
+            return "Error ! Please Check How Many Days Of Safari Are You Planning...!!!!!!";
+        }
+
+        if (!formData.safariStyle) {
+            return "Error ! Please Check What Type Of Tanzania Safari Are You Looking For...!!!!!!";
+        }
+
+        if (!formData.travelDate) {
+            return "Error ! Please Choose When You Are Planning For The Safari...!!!!!!";
+        }
+
+        if (!contactData.fullName) {
+            return "Error ! Please Enter Your Full Name...!!!!!!";
+        }
+
+        if (!contactData.email) {
+            return "Error ! Please Enter Your Email Address...!!!!!!";
+        }
+
+        if (!contactData.people) {
+            return "Error ! Please Enter Number Of People...!!!!!!";
+        }
+
+        return ""; //  ALL GOOD
     };
-    console.log("FINAL FORM DATA", finalData);
-  };
 
-  return (
-    <>
-      <HeroSection scrollToParks={() => parksRef.current?.scrollIntoView({ behavior: "smooth" })} />
+    const updateFormData = (key, value) => {
+        setFormData(prev => ({ ...prev, [key]: value }));
+    };
 
-      <NationalParks
-        ref={parksRef}
-        onChange={(parks) => updateFormData("parks", parks)}
-      />
+    const handleFinalSubmit = (contactData) => {
+        const errorMessage = validateBeforeSubmit(contactData);
 
-      <PlanningDays
-        onChange={(day) => updateFormData("planningDays", day)}
-        scrollToSafariStyle={() => safariStyleRef.current?.scrollIntoView({ behavior: "smooth" })}
-      />
+        if (errorMessage) {
+            setSubmitError(errorMessage);
+            contactInfoRef.current?.scrollIntoView({ behavior: "smooth" });
+            return; // STOP HERE
+        }
 
-      <SafariStyle
-        ref={safariStyleRef}
-        onChange={(style) => updateFormData("safariStyle", style)}
-        scrollToPlanningSafari={() => planningSafariRef.current?.scrollIntoView({ behavior: "smooth" })}
-      />
+        setSubmitError("");
 
-      <div ref={planningSafariRef}>
-        <PlanningSafari
-          onChange={(date) => updateFormData("travelDate", date)}
-          scrollToContactInformation={() => contactInfoRef.current?.scrollIntoView({ behavior: "smooth" })}
-        />
-      </div>
+        const finalData = {
+            ...formData,
+            contact: contactData,
+        };
 
-      <div ref={contactInfoRef}>
-        <ContactInformation onSubmit={handleFinalSubmit} />
-      </div>
-    </>
-  );
+        console.log("FINAL FORM DATA", finalData);
+        toast.success("Your Information Submitted Successfully.");
+
+        // REDIRECT AFTER SHORT DELAY
+        setTimeout(() => {
+            navigate("/thank-you");
+        }, 2500);
+    };
+
+
+    return (
+        <>
+            <HeroSection scrollToParks={() => parksRef.current?.scrollIntoView({ behavior: "smooth" })} />
+
+            <NationalParks
+                ref={parksRef}
+                onChange={(parks) => updateFormData("parks", parks)}
+            />
+
+            <PlanningDays
+                onChange={(day) => updateFormData("planningDays", day)}
+                scrollToSafariStyle={() => safariStyleRef.current?.scrollIntoView({ behavior: "smooth" })}
+            />
+
+            <SafariStyle
+                ref={safariStyleRef}
+                onChange={(style) => updateFormData("safariStyle", style)}
+                scrollToPlanningSafari={() => planningSafariRef.current?.scrollIntoView({ behavior: "smooth" })}
+            />
+
+            <div ref={planningSafariRef}>
+                <PlanningSafari
+                    onChange={(date) => updateFormData("travelDate", date)}
+                    scrollToContactInformation={() => contactInfoRef.current?.scrollIntoView({ behavior: "smooth" })}
+                />
+            </div>
+
+            <div ref={contactInfoRef}>
+                <ContactInformation onSubmit={handleFinalSubmit} submitError={submitError} />
+            </div>
+        </>
+    );
 };
 
 export default LandingForm;

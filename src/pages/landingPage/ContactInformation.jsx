@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaLock } from "react-icons/fa";
 
-const ContactInformation = ({ onSubmit }) => {
+const ContactInformation = ({ onSubmit, submitError }) => {
     const [contact, setContact] = useState({
         fullName: "",
         email: "",
@@ -47,7 +47,7 @@ const ContactInformation = ({ onSubmit }) => {
                                     className="form-control"
                                     id="exampleInputFullname"
                                     placeholder="Full Name"
-                                    required
+                                    
                                 />
                             </div>
                             <div className="mb-3">
@@ -62,7 +62,7 @@ const ContactInformation = ({ onSubmit }) => {
                                     className="form-control"
                                     id="exampleInputEmail1"
                                     placeholder="Email ID"
-                                    required
+                                    
                                 />
                             </div>
                             <div className="mb-3">
@@ -107,6 +107,7 @@ const ContactInformation = ({ onSubmit }) => {
                                     name="people"
                                     value={contact.people}
                                     onChange={handleChange}
+                                    min={1}
                                     className="form-control"
                                     id="exampleInputPeople"
                                     placeholder="Number of People"
@@ -119,6 +120,13 @@ const ContactInformation = ({ onSubmit }) => {
                                 <textarea id="exampleTextarea" name="message" value={contact.message}
                                     onChange={handleChange} className="form-control" placeholder="Any additional details about your tour will help us suggest the most suitable parks, itineraries, accommodations, and more for your trip." style={{ height: 100 }}></textarea>
                             </div>
+
+                            {submitError && (
+                                <div className="alert alert-danger mt-4 text-center fw-bold">
+                                    {submitError}
+                                </div>
+                            )}
+
                             <button type="submit" className="btn btn-theme text-uppercase p-3 fw-bold">
                                 Send me an offer
                             </button>
