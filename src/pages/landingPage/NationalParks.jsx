@@ -1,7 +1,7 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useState, useEffect } from "react";
 import { Check } from "lucide-react";
 
-const NationalParks = forwardRef((props, ref) => {
+const NationalParks = forwardRef(({ onChange }, ref) => {
     const [selectedParks, setSelectedParks] = useState([]);
 
     const parks = [
@@ -63,17 +63,19 @@ const NationalParks = forwardRef((props, ref) => {
         }
     ];
 
-    const handleParkClick = (parkId) => {
-        setSelectedParks((prev) => {
-            if (prev.includes(parkId)) {
-                return prev.filter((id) => id !== parkId);
-            } else {
-                return [...prev, parkId];
-            }
-        });
+    const handleParkClick = (parkName) => {
+        setSelectedParks(prev =>
+            prev.includes(parkName)
+                ? prev.filter(p => p !== parkName)
+                : [...prev, parkName]
+        );
     };
 
-    const isParkSelected = (parkId) => selectedParks.includes(parkId);
+    // SYNC TO PARENT SAFELY
+    useEffect(() => {
+        onChange(selectedParks);
+        console.log(selectedParks)
+    }, [selectedParks, onChange]);
 
     return (
         <section className="national-parks-section py-5 bg-theme-light" ref={ref} >
@@ -95,7 +97,8 @@ const NationalParks = forwardRef((props, ref) => {
                         >
                             <div
                                 className="card shadow h-100 d-flex flex-column park-card"
-                                onClick={() => handleParkClick(park.id)}
+                                // onClick={() => handleParkClick(park.id)}
+                                onClick={() => handleParkClick(park.name)}
                             >
                                 {/* <div className="position-relative" style={{ height: "200px", overflow: "hidden" }}> */}
                                 <div className="park-img-wrapper position-relative">
@@ -107,7 +110,8 @@ const NationalParks = forwardRef((props, ref) => {
                                     />
 
                                     {/* Overlay layer when selected */}
-                                    {isParkSelected(park.id) && (
+                                    {/* {isParkSelected(park.id) && ( */}
+                                    {selectedParks.includes(park.name) && (
                                         <div
                                             className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
                                             style={{

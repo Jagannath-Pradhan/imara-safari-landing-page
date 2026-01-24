@@ -2,7 +2,7 @@ import { useState, forwardRef } from "react";
 import { Check } from "lucide-react";
 
 const SafariStyle = forwardRef(
-  ({ scrollToPlanningSafari }, ref) => {
+  ({ scrollToPlanningSafari, onChange }, ref) => {
     const [selectedStyle, setSelectedStyle] = useState(null);
 
     const safariStyles = [
@@ -12,9 +12,18 @@ const SafariStyle = forwardRef(
       { id: 4, name: "Not decided yet", image: "/images/safari-style/not-decided.webp" },
     ];
 
-    const handleStyleClick = (styleId) => {
-      setSelectedStyle(styleId);
-      scrollToPlanningSafari(); // SAME BEHAVIOR AS PlanningDays
+    // const handleStyleClick = (styleId) => {
+    //   setSelectedStyle(styleId);
+    //   scrollToPlanningSafari(); // SAME BEHAVIOR AS PlanningDays
+    // };
+
+    // const isStyleSelected = (styleId) => selectedStyle === styleId;
+
+    const handleStyleClick = (style) => {
+      setSelectedStyle(style.id);  // UI state
+      onChange(style.name);        // ✅ SEND TO PARENT
+      console.log(style.name)
+      scrollToPlanningSafari();    // keep behavior
     };
 
     const isStyleSelected = (styleId) => selectedStyle === styleId;
@@ -36,7 +45,8 @@ const SafariStyle = forwardRef(
               <div key={style.id} className="col-sm-6 col-lg-3 mb-4 d-flex">
                 <div
                   className="card shadow park-card h-100 d-flex flex-column"
-                  onClick={() => handleStyleClick(style.id)}
+                //   onClick={() => handleStyleClick(style.id)}
+                onClick={() => handleStyleClick(style)}
                   style={{ cursor: "pointer" }}
                 >
                   {/* IMAGE */}

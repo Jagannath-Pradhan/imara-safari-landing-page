@@ -1,6 +1,26 @@
+import { useState } from "react";
 import { FaLock } from "react-icons/fa";
 
-const ContactInformation = () => {
+const ContactInformation = ({ onSubmit }) => {
+    const [contact, setContact] = useState({
+        fullName: "",
+        email: "",
+        countryCode: "",
+        phone: "",
+        people: "",
+        message: "",
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setContact((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSubmit(contact); //  SEND DATA TO PARENT
+    };
+
     return (
         <section className="contact-information-section py-5 bg-theme-light">
             <div className="container">
@@ -14,16 +34,20 @@ const ContactInformation = () => {
                         </p>
                     </div>
                     <div className="col-12 col-md-6 mx-auto">
-                        <form className="d-flex flex-column">
+                        <form className="d-flex flex-column" onSubmit={handleSubmit}>
                             <div className="mb-3">
                                 <label htmlFor="exampleInputFullname" className="form-label fw-bold">
                                     Full Name (Please enter your first and last name)
                                 </label>
                                 <input
                                     type="text"
+                                    name="fullName"
+                                    value={contact.fullName}
+                                    onChange={handleChange}
                                     className="form-control"
                                     id="exampleInputFullname"
                                     placeholder="Full Name"
+                                    required
                                 />
                             </div>
                             <div className="mb-3">
@@ -32,9 +56,13 @@ const ContactInformation = () => {
                                 </label>
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={contact.email}
+                                    onChange={handleChange}
                                     className="form-control"
                                     id="exampleInputEmail1"
                                     placeholder="Email ID"
+                                    required
                                 />
                             </div>
                             <div className="mb-3">
@@ -43,8 +71,9 @@ const ContactInformation = () => {
                                 </label>
 
                                 <div className="d-flex align-items-center gap-3">
-                                    <select className="form-select">
-                                        <option value="Country Code" disabled>Country Code</option>
+                                    <select className="form-select" name="countryCode" value={contact.countryCode}
+                                        onChange={handleChange}>
+                                        <option value="" disabled>Country Code</option>
                                         <option value="+1">+1 (USA)</option>
                                         <option value="+44">+44 (UK)</option>
                                         <option value="+91">+91 (India)</option>
@@ -55,6 +84,9 @@ const ContactInformation = () => {
 
                                     <input
                                         type="tel"
+                                        name="phone"
+                                        value={contact.phone}
+                                        onChange={handleChange}
                                         className="form-control"
                                         id="exampleInputPhone"
                                         placeholder="Phone"
@@ -72,6 +104,9 @@ const ContactInformation = () => {
                                 </label>
                                 <input
                                     type="number"
+                                    name="people"
+                                    value={contact.people}
+                                    onChange={handleChange}
                                     className="form-control"
                                     id="exampleInputPeople"
                                     placeholder="Number of People"
@@ -81,7 +116,8 @@ const ContactInformation = () => {
                                 <label htmlFor="exampleTextarea" className="form-label fw-bold">
                                     Additional Information (optional)
                                 </label>
-                                <textarea id="exampleTextarea" className="form-control" placeholder="Any additional details about your tour will help us suggest the most suitable parks, itineraries, accommodations, and more for your trip." style={{ height: 100 }}></textarea>
+                                <textarea id="exampleTextarea" name="message" value={contact.message}
+                                    onChange={handleChange} className="form-control" placeholder="Any additional details about your tour will help us suggest the most suitable parks, itineraries, accommodations, and more for your trip." style={{ height: 100 }}></textarea>
                             </div>
                             <button type="submit" className="btn btn-theme text-uppercase p-3 fw-bold">
                                 Send me an offer

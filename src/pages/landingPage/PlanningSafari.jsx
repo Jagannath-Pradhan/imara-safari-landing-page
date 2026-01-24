@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const PlanningSafari = ({ scrollToContactInformation }) => {
+const PlanningSafari = ({ scrollToContactInformation, onChange }) => {
     const [selectedDate, setSelectedDate] = useState(null);
     const [view, setView] = useState('year'); // 'year' or 'month'
     const [currentYear, setCurrentYear] = useState(2026);
@@ -33,21 +33,36 @@ const PlanningSafari = ({ scrollToContactInformation }) => {
         setView('month');
     };
 
-    const handleDateClick = (day) => {
-        if (
-            currentYear === currentYearToday &&
-            selectedMonth === currentMonth &&
-            day < currentDate
-        ) {
-            return;
-        }
+    // const handleDateClick = (day) => {
+    //     if (
+    //         currentYear === currentYearToday &&
+    //         selectedMonth === currentMonth &&
+    //         day < currentDate
+    //     ) {
+    //         return;
+    //     }
 
-        const selected = new Date(currentYear, selectedMonth, day);
-        setSelectedDate(selected);
-        console.log(selected)
+    //     const selected = new Date(currentYear, selectedMonth, day);
+    //     setSelectedDate(selected);
+    //     console.log(selected)
 
-        scrollToContactInformation(); // AUTO SCROLL
-    };
+    //     scrollToContactInformation(); // AUTO SCROLL
+    // };
+
+      const handleDateClick = (day) => {
+    if (
+      currentYear === currentYearToday &&
+      selectedMonth === currentMonth &&
+      day < currentDate
+    ) return;
+
+    const selected = new Date(currentYear, selectedMonth, day);
+
+    setSelectedDate(selected);   // UI state
+    onChange(selected.toISOString().split("T")[0]); // SEND DATE
+    console.log(selected.toISOString().split("T")[0]); // SEND DATE
+    scrollToContactInformation();
+  };
 
 
     const getDaysInMonth = (year, month) => {

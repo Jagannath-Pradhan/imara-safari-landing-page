@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import HeroSection from './HeroSection';
 import NationalParks from './NationalParks';
 import PlanningDays from './PlanningDays';
@@ -7,52 +7,64 @@ import PlanningSafari from './PlanningSafari';
 import ContactInformation from './ContactInformation';
 
 const LandingForm = () => {
-    const parksRef = useRef(null);
-    const safariStyleRef = useRef(null);
-    const planningSafariRef = useRef(null);
-    const contactInfoRef = useRef(null);
+  const parksRef = useRef(null);
+  const safariStyleRef = useRef(null);
+  const planningSafariRef = useRef(null);
+  const contactInfoRef = useRef(null);
 
-    const scrollToSafariStyle = () => {
-        safariStyleRef.current?.scrollIntoView({ behavior: "smooth" });
+  // CENTRAL FORM STATE
+  const [formData, setFormData] = useState({
+    parks: [],
+    planningDays: "",
+    safariStyle: "",
+    travelDate: null,
+    contact: {}
+  });
+
+  const updateFormData = (key, value) => {
+    setFormData(prev => ({ ...prev, [key]: value }));
+  };
+
+  const handleFinalSubmit = (contactData) => {
+    const finalData = {
+      ...formData,
+      contact: contactData
     };
+    console.log("FINAL FORM DATA", finalData);
+  };
 
-    const scrollToPlanningSafari = () => {
-        planningSafariRef.current?.scrollIntoView({ behavior: "smooth" });
-    };
+  return (
+    <>
+      <HeroSection scrollToParks={() => parksRef.current?.scrollIntoView({ behavior: "smooth" })} />
 
-    const scrollToContactInformation = () => {
-        contactInfoRef.current?.scrollIntoView({ behavior: "smooth" });
-    };
+      <NationalParks
+        ref={parksRef}
+        onChange={(parks) => updateFormData("parks", parks)}
+      />
 
-    return (
-        <>
-            <HeroSection
-                scrollToParks={() => {
-                    parksRef.current?.scrollIntoView({ behavior: "smooth" });
-                }}
-            />
+      <PlanningDays
+        onChange={(day) => updateFormData("planningDays", day)}
+        scrollToSafariStyle={() => safariStyleRef.current?.scrollIntoView({ behavior: "smooth" })}
+      />
 
-            <NationalParks ref={parksRef} />
+      <SafariStyle
+        ref={safariStyleRef}
+        onChange={(style) => updateFormData("safariStyle", style)}
+        scrollToPlanningSafari={() => planningSafariRef.current?.scrollIntoView({ behavior: "smooth" })}
+      />
 
-            <PlanningDays scrollToSafariStyle={scrollToSafariStyle} />
+      <div ref={planningSafariRef}>
+        <PlanningSafari
+          onChange={(date) => updateFormData("travelDate", date)}
+          scrollToContactInformation={() => contactInfoRef.current?.scrollIntoView({ behavior: "smooth" })}
+        />
+      </div>
 
-            <SafariStyle
-                ref={safariStyleRef}
-                scrollToPlanningSafari={scrollToPlanningSafari}
-            />
+      <div ref={contactInfoRef}>
+        <ContactInformation onSubmit={handleFinalSubmit} />
+      </div>
+    </>
+  );
+};
 
-            <div ref={planningSafariRef}>
-                <PlanningSafari
-                    scrollToContactInformation={scrollToContactInformation} // PASS
-                />
-            </div>
-
-            {/* ATTACH REF */}
-            <div ref={contactInfoRef}>
-                <ContactInformation />
-            </div>
-        </>
-    )
-}
-
-export default LandingForm
+export default LandingForm;

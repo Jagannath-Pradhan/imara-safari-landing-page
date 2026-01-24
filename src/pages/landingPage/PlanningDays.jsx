@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
 
-const PlanningDays = ({ scrollToSafariStyle }) => {
+const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
     const [selectedDay, setSelectedDay] = useState(null);
 
     const days = [
@@ -27,9 +27,19 @@ const PlanningDays = ({ scrollToSafariStyle }) => {
         }
     ];
 
-    const handleDayClick = (dayId) => {
-        setSelectedDay(dayId);
-        scrollToSafariStyle(); //  keep existing behavior
+    // const handleDayClick = (dayId) => {
+    //     setSelectedDay(dayId);
+    //     scrollToSafariStyle(); //  keep existing behavior
+    // };
+
+    // const isDaySelected = (dayId) => selectedDay === dayId;
+
+
+    const handleDayClick = (day) => {
+        setSelectedDay(day.id);   // UI state
+        onChange(day.name);       // ✅ SEND TO PARENT
+        console.log(day.name)
+        scrollToSafariStyle();    // keep existing behavior
     };
 
     const isDaySelected = (dayId) => selectedDay === dayId;
@@ -54,7 +64,7 @@ const PlanningDays = ({ scrollToSafariStyle }) => {
                         >
                             <div
                                 className="card shadow park-card h-100 d-flex flex-column"
-                                onClick={() => handleDayClick(day.id)}
+                                onClick={() => handleDayClick(day)}
                                 style={{ cursor: "pointer" }}
                             >
                                 <div className="park-img-wrapper position-relative">
