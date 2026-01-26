@@ -82,7 +82,7 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
             <section className="national-parks-section py-lg-5 py-4 bg-theme-light" ref={ref}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 mb-4">
+                        <div className="col-12 mb-lg-4">
                             <h3 className="text-capitalize">
                                 1. Which national parks would you like to visit?
                             </h3>
