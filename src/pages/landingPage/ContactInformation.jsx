@@ -34,7 +34,7 @@ const ContactInformation = ({ onSubmit, submitError }) => {
                         </p>
                     </div>
                     <div className="col-12 col-md-6 mx-auto">
-                        <form className="d-flex flex-column" onSubmit={handleSubmit}>
+                        <form className="d-flex flex-column px-4" onSubmit={handleSubmit}>
                             <div className="mb-2 mb-lg-3">
                                 <label htmlFor="exampleInputFullname" className="form-label fw-bold">
                                     Full Name (Please enter your first and last name)
