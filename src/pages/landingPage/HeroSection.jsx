@@ -15,24 +15,32 @@ const HeroSection = ({scrollToParks }) => {
 
             {/* Text Content */}
             <div className="hero-text position-absolute top-50 start-50 translate-middle text-center px-3">
-                <h1 className="fw-bold text-uppercase d-none d-lg-block text-nowrap">
+                {/* <h1 className="fw-bold text-uppercase d-none d-lg-block text-nowrap">
                     Your Tanzania Safari Begins Here
                 </h1>
 
-                {/* Mobile heading (allows wrap) */}
                 <h1 className="fw-bold text-uppercase d-lg-none">
                     Your Tanzania Safari Begins Here
                 </h1>
 
                 <p className="fw-bold mt-4 d-none d-md-block text-white">
                     From stunning national parks to majestic mountains and pristine white sand beaches
+                </p> */}
+
+                {/* Heading */}
+                <h1 className="fw-bold text-uppercase text-nowrap">
+                    Your Tanzania Safari Begins Here
+                </h1>
+
+                {/* Description */}
+                <p className="fw-bold text-white mt-3">
+                    From stunning national parks to majestic mountains and pristine white sand beaches
                 </p>
 
                 <button
                     id="scrollDownButton"
                     // className="scroll-button d-none d-md-block"
-                    className="scroll-button mt-3 
-                               fs-6 fs-md-5"
+                    className="scroll-button mt-3"
                     onClick={scrollToParks}
                 >
                     ▼

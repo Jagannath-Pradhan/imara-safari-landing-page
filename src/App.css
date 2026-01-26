@@ -4,7 +4,8 @@ html {
     scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden !important;
 }
 
@@ -79,36 +80,9 @@ h5 {
 
 /* hero section start */
 
-/* desktop */
-/* .hero-section-container h1 {
-  font-size: 3rem;
-  font-family: 'AcuminPro-Semibold' !important;
-} */
-
-header img {
-    height: 100vh !important;
-    object-fit: cover;
-}
-
-/* mobile */
-@media (max-width: 576px) {
-    .hero-section-container h1 {
-        font-size: 1.5rem;
+.hero-section-container .hero-text p {
+        font-size: 20px !important;
     }
-}
-
-.hero-text {
-    width: 100%;
-    max-width: 1100px;
-    /* widen text container */
-}
-
-.hero-text h2 {
-    max-width: 1000px;
-    /* widen h2 specifically */
-    margin: 0 auto;
-}
-
 
 .scroll-button {
     display: block;
@@ -123,8 +97,91 @@ header img {
     transition: background-color 0.5s;
 
     &:hover {
-        /* background-color: #f6751a; */
         background-color: black;
+    }
+}
+
+/* desktop */
+@media (max-width: 992px) {
+    header img {
+        height: 85vh !important;
+        object-fit: cover;
+    }
+
+    .hero-section-container h1 {
+        font-size: 38px !important;
+    }
+
+    .hero-section-container .hero-text p {
+        font-size: 16px !important;
+    }
+
+    .hero-section-container .scroll-button {
+        padding: 10px 14px !important;
+        font-size: 20px !important;
+    }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    header img {
+        height: 85vh !important;
+        object-fit: cover;
+    }
+
+    .hero-section-container h1 {
+        font-size: 28px !important;
+    }
+
+    .hero-section-container .hero-text p {
+        font-size: 14px !important;
+    }
+
+    .hero-section-container .scroll-button {
+        padding: 8px 12px !important;
+        font-size: 18px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 576px) {
+    header img {
+        height: 65vh !important;
+        object-fit: cover;
+    }
+
+    .hero-section-container h1 {
+        font-size: 20px !important;
+    }
+
+    .hero-section-container .hero-text p {
+        font-size: 14px !important;
+    }
+
+    .hero-section-container .scroll-button {
+        padding: 3px 8px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* small mobile */
+@media (max-width: 415px) {
+    header img {
+        height: 65vh !important;
+        object-fit: cover;
+    }
+
+    .hero-section-container h1 {
+        font-size: 12px !important;
+    }
+
+    .hero-section-container .hero-text p {
+        font-size: 10px !important;
+    }
+
+    .hero-section-container .scroll-button {
+        padding: 2px 6px !important;
+        font-size: 11px !important;
     }
 }
 
@@ -164,11 +221,9 @@ header img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to top,
-        rgba(216, 112, 40, 0.95),
-        rgba(216, 112, 40, 0.90)
-    );
+    background: linear-gradient(to top,
+            rgba(216, 112, 40, 0.95),
+            rgba(216, 112, 40, 0.90));
     transform: translateY(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
@@ -216,26 +271,27 @@ header img {
 
 /* MOBILE ONLY */
 @media (max-width: 767.98px) {
-  /* Hide description text */
-  .park-card .card-text {
-    display: none;
-  }
 
-  /* Hide sliding overlay entirely */
-  .park-card .card-body-overlay {
-    display: none;
-  }
+    /* Hide description text */
+    .park-card .card-text {
+        display: none;
+    }
 
-  /* Reduce padding for compact look */
-  .park-card .card-body {
-    padding: 0.75rem;
-  }
+    /* Hide sliding overlay entirely */
+    .park-card .card-body-overlay {
+        display: none;
+    }
 
-  /* Slightly smaller title */
-  .park-card .card-title {
-    font-size: 0.95rem;
-    margin-bottom: 0 !important;
-  }
+    /* Reduce padding for compact look */
+    .park-card .card-body {
+        padding: 0.75rem;
+    }
+
+    /* Slightly smaller title */
+    .park-card .card-title {
+        font-size: 0.95rem;
+        margin-bottom: 0 !important;
+    }
 }
 
 
@@ -273,7 +329,12 @@ header img {
 }
 
 @media (max-width: 575px) {
-    .contact-information-section .container label, .contact-information-section .container button, .contact-information-section .container input, .contact-information-section .container select, .contact-information-section .container textarea {
+
+    .contact-information-section .container label,
+    .contact-information-section .container button,
+    .contact-information-section .container input,
+    .contact-information-section .container select,
+    .contact-information-section .container textarea {
         font-size: 12px !important;
     }
 }
@@ -282,6 +343,24 @@ header img {
     .contact-information-section .container button {
         padding: 14px !important;
     }
+}
+
+/* .form-control:focus {
+    color: var(--bs-body-color)#212529;
+    background-color: var(--bs-body-bg);
+    border-color: #86b7fe;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}  */
+
+.form-control:focus,
+.form-select:focus {
+    color: none !important;
+    background-color: none !important;
+    border-color: #d87028 !important;
+    outline: 0;
+    box-shadow: none !important;
 }
 
 /* contact information end */
@@ -571,39 +650,22 @@ header img {
 
 
 .experience-img-wrapper.fixed-height {
-  height: 260px; /* adjust if needed */
-  overflow: hidden;
-  border-radius: 8px;
+    height: 260px;
+    /* adjust if needed */
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .experience-img-wrapper.fixed-height img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
     width: 1rem !important;
     color: #d87028 !important;
 }
 
 /* experiences section end */
-/* 
-
-.form-control:focus {
-    color: var(--bs-body-color)#212529;
-    background-color: var(--bs-body-bg);
-    border-color: #86b7fe;
-    border-color: #86b7fe;
-    outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
-} */
-
-
-.form-control:focus, .form-select:focus {
-    color: none !important;
-    background-color: none !important;
-    border-color: #d87028 !important;
-    outline: 0;
-    box-shadow:none !important;
-}
