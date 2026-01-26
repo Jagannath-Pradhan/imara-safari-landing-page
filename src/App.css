@@ -186,6 +186,8 @@ h5 {
     }
 }
 
+
+
 /* hero section end */
 
 
@@ -228,8 +230,14 @@ h5 {
 }
 
 .park-card.selected .card-body {
-    opacity: 0;
-    pointer-events: none;
+    /* opacity: 0;
+    pointer-events: none; */
+    background-color: rgba(216, 112, 40, 0.9);
+    transition: background-color 0.3s ease;
+}
+
+.park-card.selected .card-title {
+    color: #fff !important;
 }
 
 .overlay-text-content {
@@ -237,7 +245,7 @@ h5 {
     transform: translateY(10px);
     transition: all 0.3s ease 0.15s;
     text-align: center;
-    color: white;
+    color: white !important;
 }
 
 .park-card.selected .overlay-text-content {
@@ -259,13 +267,17 @@ h5 {
     }
 }
 
-.national-parks-section .park-card-body-wrapper h5 {
+/* .national-parks-section .park-card-body-wrapper h5 {
     color: #d87028 !important;
+} */
+.park-card {
+    transition: all 0.3s ease;
 }
 
 .park-card:hover {
     cursor: pointer;
-    color: black !important;
+    color: #d87028 !important;
+    transition: all 0.3s ease;
 }
 
 .park-card-body-wrapper .card-title {

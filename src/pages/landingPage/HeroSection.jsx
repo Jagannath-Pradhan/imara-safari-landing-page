@@ -1,4 +1,4 @@
-const HeroSection = ({scrollToParks }) => {
+const HeroSection = ({ scrollToParks }) => {
     return (
         <header className="hero-section-container position-relative text-white" >
             <img
@@ -33,20 +33,16 @@ const HeroSection = ({scrollToParks }) => {
                 </h1> */}
 
 
-                {/* Heading */}
-<h1 className="fw-bold text-uppercase text-center">
-    {/* Desktop & Tablet */}
-    <span className="d-none d-sm-inline text-nowrap">
-        Your Tanzania Safari Begins Here
-    </span>
+                <h1 className="fw-bold text-uppercase text-center">
+                    <span className="d-none d-sm-inline text-nowrap">
+                        Your Tanzania Safari Begins Here
+                    </span>
 
-    {/* Mobile */}
-    <span className="d-inline d-sm-none">
-        Your Tanzania Safari <br />
-        Begins Here
-    </span>
-</h1>
-
+                    <span className="d-inline d-sm-none">
+                        Your Tanzania Safari <br />
+                        Begins Here
+                    </span>
+                </h1>
 
                 {/* Description */}
                 <p className="fw-bold text-white mt-3">
