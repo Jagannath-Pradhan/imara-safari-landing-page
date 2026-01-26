@@ -48,7 +48,7 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
         <section className="planning-days-section py-lg-5 py-4">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 mb-4">
+                    <div className="col-12 mb-lg-4">
                         <h3 className="text-capitalize">
                             2. How many days are you planning for your Tanzania safari?
                         </h3>
