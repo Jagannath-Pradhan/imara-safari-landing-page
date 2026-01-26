@@ -154,6 +154,10 @@ h5 {
         font-size: 20px !important;
     }
 
+.hero-section-container .hero-text h1 {
+    width: 300px !important;
+}
+
     .hero-section-container .hero-text p {
         font-size: 14px !important;
     }

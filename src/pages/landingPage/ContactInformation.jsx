@@ -25,7 +25,7 @@ const ContactInformation = ({ onSubmit, submitError }) => {
         <section className="contact-information-section py-lg-5 py-4 bg-theme-light">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 mb-md-4">
+                    <div className="col-12 mb-lg-4">
                         <h3 className="text-capitalize">
                             5. Contact Information
                         </h3>
