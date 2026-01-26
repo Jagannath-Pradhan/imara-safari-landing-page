@@ -4,6 +4,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden !important;
+}
+
 
 body {
     font-family: "Soleil" !important;
@@ -80,6 +84,11 @@ h5 {
   font-size: 3rem;
   font-family: 'AcuminPro-Semibold' !important;
 } */
+
+header img {
+    height: 100vh !important;
+    object-fit: cover;
+}
 
 /* mobile */
 @media (max-width: 576px) {

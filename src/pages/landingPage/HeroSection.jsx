@@ -30,7 +30,9 @@ const HeroSection = ({scrollToParks }) => {
 
                 <button
                     id="scrollDownButton"
-                    className="scroll-button d-none d-md-block"
+                    // className="scroll-button d-none d-md-block"
+                    className="scroll-button mt-3 
+                               fs-6 fs-md-5"
                     onClick={scrollToParks}
                 >
                     ▼
