@@ -63,18 +63,8 @@ const SafariStyle = forwardRef(
                                                 style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
                                             >
                                                 <div
-                                                    style={{
-                                                        width: 70,
-                                                        height: 70,
-                                                        backgroundColor: "#f8f9faa8",
-                                                        borderRadius: "50%",
-                                                        display: "flex",
-                                                        alignItems: "center",
-                                                        justifyContent: "center",
-                                                        boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
-                                                    }}
-                                                >
-                                                    <Check size={50} strokeWidth={4} color="#d87028" />
+                                                    className="tick-background">
+                                                    <Check className="check" size={50} strokeWidth={4} color="#d87028" />
                                                 </div>
                                             </div>
                                         )}
@@ -83,7 +73,7 @@ const SafariStyle = forwardRef(
                                     {/* 🔥 SAME BODY OVERLAY STRUCTURE */}
                                     <div className="park-card-body-wrapper">
                                         <div className="card-body d-flex align-items-center justify-content-center">
-                                            <h5 className="text-uppercase mb-0">{style.name}</h5>
+                                            <h5 className="card-title text-uppercase mb-0">{style.name}</h5>
                                         </div>
 
                                         <div className="card-body-overlay">

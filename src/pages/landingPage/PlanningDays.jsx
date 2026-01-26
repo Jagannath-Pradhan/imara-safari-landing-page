@@ -85,18 +85,10 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
                                             }}
                                         >
                                             <div
-                                                style={{
-                                                    width: "70px",
-                                                    height: "70px",
-                                                    backgroundColor: "#f8f9faa8",
-                                                    borderRadius: "50%",
-                                                    display: "flex",
-                                                    alignItems: "center",
-                                                    justifyContent: "center",
-                                                    boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
-                                                }}
+                                            className="tick-background"
+                                                
                                             >
-                                                <Check size={50} strokeWidth={4} style={{ color: "#d87028" }} />
+                                                <Check className="check" size={50} strokeWidth={4} style={{ color: "#d87028" }} />
                                             </div>
                                         </div>
                                     )}

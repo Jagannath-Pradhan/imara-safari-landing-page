@@ -118,18 +118,9 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
                                                 }}
                                             >
                                                 <div
-                                                    style={{
-                                                        width: "70px",
-                                                        height: "70px",
-                                                        backgroundColor: "#f8f9faa8",
-                                                        borderRadius: "50%",
-                                                        display: "flex",
-                                                        alignItems: "center",
-                                                        justifyContent: "center",
-                                                        boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
-                                                    }}
-                                                >
+                                                className="tick-background">
                                                     <Check
+                                                    className="check"
                                                         size={50}
                                                         strokeWidth={5}
                                                         style={{
@@ -144,18 +135,10 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
                                     {/* Card Body with Sliding Layer Effect */}
                                     <div className="park-card-body-wrapper">
                                         <div className="card-body d-flex flex-column">
-                                            <h5 className="card-title text-center text-uppercase mb-3" style={{
-                                                fontSize: "1.1rem",
-                                                fontWeight: "600",
-                                                letterSpacing: "0.5px"
-                                            }}>
+                                            <h5 className="card-title text-center text-uppercase mb-3">
                                                 {park.name}
                                             </h5>
-                                            <p className="card-text text-center" style={{
-                                                fontSize: "0.9rem",
-                                                lineHeight: "1.5",
-                                                margin: 0
-                                            }}>
+                                            <p className="card-text text-center">
                                                 {park.description}
                                             </p>
                                         </div>

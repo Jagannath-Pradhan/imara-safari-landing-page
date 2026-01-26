@@ -81,8 +81,8 @@ h5 {
 /* hero section start */
 
 .hero-section-container .hero-text p {
-        font-size: 20px !important;
-    }
+    font-size: 20px !important;
+}
 
 .scroll-button {
     display: block;
@@ -190,24 +190,13 @@ h5 {
 
 /* national parks section start */
 
-/* .park-card {
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    color: #d87028 !important;
-    transition: color 0.5s;
-
-    &:hover {
-        color: black !important;
-    }
-} */
-
 /* Image wrapper */
 .park-img-wrapper {
     overflow: hidden;
 }
 
 .national-parks-section .card .card-body p {
-    text-align: center;
+    font-size: 0.9rem !important;
 }
 
 .park-card-body-wrapper {
@@ -269,6 +258,31 @@ h5 {
     }
 }
 
+.national-parks-section .park-card-body-wrapper h5 {
+    color: #d87028 !important;
+}
+
+.park-card:hover {
+    cursor: pointer;
+    color: black !important;
+}
+
+.park-card-body-wrapper .card-title {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.tick-background {
+    width: 70px;
+    height: 70px;
+    background-color: #f8f9faa8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* MOBILE ONLY */
 @media (max-width: 767.98px) {
 
@@ -292,8 +306,21 @@ h5 {
         font-size: 0.95rem;
         margin-bottom: 0 !important;
     }
-}
 
+    .park-card-body-wrapper .card-title {
+        font-size: 0.8rem;
+    }
+
+    .tick-background {
+        width: 50px;
+        height: 50px;
+    }
+
+    .check {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
 
 /* national parks section end */
 
