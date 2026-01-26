@@ -154,9 +154,9 @@ h5 {
         font-size: 20px !important;
     }
 
-.hero-section-container .hero-text h1 {
-    width: 300px !important;
-}
+    .hero-section-container .hero-text h1 {
+        width: 300px !important;
+    }
 
     .hero-section-container .hero-text p {
         font-size: 14px !important;
@@ -177,11 +177,10 @@ h5 {
 
     .hero-section-container h1 {
         font-size: 24px !important;
-        /* text-wrap: wrap !important; */
     }
 
     .hero-section-container .hero-text p {
-        font-size: 10px !important;
+        font-size: 16px !important;
     }
 
     .hero-section-container .scroll-button {
@@ -372,6 +371,21 @@ h5 {
     margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+
+    .contact-information-section .container label,
+    .contact-information-section .container button,
+    .contact-information-section .container input,
+    .contact-information-section .container select,
+    .contact-information-section .container textarea {
+        font-size: 14px !important;
+    }
+
+    .contact-information-section .container button {
+        padding: 16px !important;
+    }
+}
+
 @media (max-width: 575px) {
 
     .contact-information-section .container label,
@@ -381,9 +395,7 @@ h5 {
     .contact-information-section .container textarea {
         font-size: 12px !important;
     }
-}
 
-@media (max-width: 575px) {
     .contact-information-section .container button {
         padding: 14px !important;
     }

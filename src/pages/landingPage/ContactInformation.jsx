@@ -33,8 +33,8 @@ const ContactInformation = ({ onSubmit, submitError }) => {
                             We will send you offers via email. Your contact information will remain confidential and will only be used for <span className="fw-bold">safari offers in Tanzania.</span>
                         </p>
                     </div>
-                    <div className="col-12 col-md-6 mx-auto">
-                        <form className="d-flex flex-column px-2" onSubmit={handleSubmit}>
+                    <div className="col-12 col-lg-6 mx-auto">
+                        <form className="d-flex flex-column px-1" onSubmit={handleSubmit}>
                             <div className="mb-2 mb-lg-3">
                                 <label htmlFor="exampleInputFullname" className="form-label fw-bold">
                                     Full Name (Please enter your first and last name)
