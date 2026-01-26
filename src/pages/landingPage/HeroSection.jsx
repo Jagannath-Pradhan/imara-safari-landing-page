@@ -14,7 +14,7 @@ const HeroSection = ({scrollToParks }) => {
             ></div>
 
             {/* Text Content */}
-            <div className="hero-text position-absolute top-50 start-50 translate-middle text-center px-3">
+            <div className="hero-text position-absolute top-50 start-50 translate-middle text-center">
                 {/* <h1 className="fw-bold text-uppercase d-none d-lg-block text-nowrap">
                     Your Tanzania Safari Begins Here
                 </h1>
@@ -28,9 +28,25 @@ const HeroSection = ({scrollToParks }) => {
                 </p> */}
 
                 {/* Heading */}
-                <h1 className="fw-bold text-uppercase text-nowrap">
+                {/* <h1 className="fw-bold text-uppercase text-nowrap">
                     Your Tanzania Safari Begins Here
-                </h1>
+                </h1> */}
+
+
+                {/* Heading */}
+<h1 className="fw-bold text-uppercase text-center">
+    {/* Desktop & Tablet */}
+    <span className="d-none d-sm-inline text-nowrap">
+        Your Tanzania Safari Begins Here
+    </span>
+
+    {/* Mobile */}
+    <span className="d-inline d-sm-none">
+        Your Tanzania Safari <br />
+        Begins Here
+    </span>
+</h1>
+
 
                 {/* Description */}
                 <p className="fw-bold text-white mt-3">
