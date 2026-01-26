@@ -167,12 +167,13 @@ h5 {
 /* small mobile */
 @media (max-width: 415px) {
     header img {
-        height: 65vh !important;
+        height: 45vh !important;
         object-fit: cover;
     }
 
     .hero-section-container h1 {
-        font-size: 12px !important;
+        font-size: 18px !important;
+        text-wrap: wrap !important;
     }
 
     .hero-section-container .hero-text p {
