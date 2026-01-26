@@ -181,7 +181,7 @@ const PlanningSafari = ({ scrollToContactInformation, onChange }) => {
 
 
     return (
-        <div className="container py-lg-5 py-4">
+        <div className="planning-safari-section container py-lg-5 py-4">
             <div className="row">
                 <div className="col-12">
                     <h3 className="text-capitalize">

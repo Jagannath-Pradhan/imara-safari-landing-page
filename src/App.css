@@ -155,7 +155,7 @@ h5 {
     }
 
     .hero-section-container .hero-text h1 {
-        width: 300px !important;
+        width: 320px !important;
     }
 
     .hero-section-container .hero-text p {
@@ -342,6 +342,8 @@ h5 {
 
 
 /* planning safari start */
+
+.planning-safari-section 
 
 .alert-bg-theme {
     background-color: #faeee5 !important;
