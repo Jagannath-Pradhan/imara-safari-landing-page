@@ -184,8 +184,8 @@ h5 {
     }
 
     .hero-section-container .scroll-button {
-        padding: 2px 6px !important;
-        font-size: 11px !important;
+        padding-top: 4px !important;
+        font-size: 9px !important;
     }
 }
 
@@ -343,7 +343,11 @@ h5 {
 
 /* planning safari start */
 
-.planning-safari-section 
+@media (max-width: 576px) {
+    .planning-safari-section .month-button {
+        font-size: 12.8px !important;
+    }
+}
 
 .alert-bg-theme {
     background-color: #faeee5 !important;

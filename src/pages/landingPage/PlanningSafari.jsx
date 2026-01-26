@@ -248,7 +248,7 @@ const PlanningSafari = ({ scrollToContactInformation, onChange }) => {
                                         <button
                                             onClick={() => handleMonthClick(index)}
                                             disabled={isMonthDisabled(index)}
-                                            className="btn py-3 w-100"
+                                            className="btn py-3 w-100 month-button"
 
                                             style={{
                                                 backgroundColor:
