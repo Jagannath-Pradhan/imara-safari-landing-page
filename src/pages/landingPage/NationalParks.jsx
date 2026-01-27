@@ -15,38 +15,38 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
         },
         {
             id: 2,
-            name: "Ngorongoro Crater",
-            image: "/images/national-parks/ngorongoro-crater.webp",
-            description:
-                "A volcanic caldera offering dense wildlife viewing, scenic viewpoints, black rhinos, flamingos, and short travel distances within the crater floor.",
-        },
-        {
-            id: 3,
             name: "Tarangire",
             image: "/images/national-parks/tarangire.jpg",
             description:
                 "Known for ancient baobab trees, large elephant herds, seasonal river wildlife, quieter game drives, and excellent dry-season sightings.",
         },
         {
-            id: 4,
+            id: 3,
             name: "Lake Manyara",
             image: "/images/national-parks/lake-manyara.jpg",
             description:
                 "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
         },
         {
-            id: 5,
-            name: "Arusha National Park",
-            image: "/images/national-parks/arusha.webp",
-            description:
-                "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
-        },
-        {
-            id: 6,
+            id: 4,
             name: "Kilimanjaro",
             image: "/images/national-parks/kilimanjaro.jpg",
             description:
                 "Africa’s highest mountain offering trekking routes, changing habitats, crater views, and a challenging climb for adventurous travellers.",
+        },
+        {
+            id: 5,
+            name: "Ngorongoro Crater",
+            image: "/images/national-parks/ngorongoro-crater.webp",
+            description:
+                "A volcanic caldera offering dense wildlife viewing, scenic viewpoints, black rhinos, flamingos, and short travel distances within the crater floor.",
+            },
+        {
+            id: 6,
+            name: "Arusha National Park",
+            image: "/images/national-parks/arusha.webp",
+            description:
+                "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
         },
         {
             id: 7,
