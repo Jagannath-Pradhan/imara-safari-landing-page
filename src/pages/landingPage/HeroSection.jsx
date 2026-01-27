@@ -2,7 +2,7 @@ const HeroSection = ({ scrollToParks }) => {
     return (
         <header className="hero-section-container position-relative text-white" >
             <img
-                src="/images/imara_banner_img.webp"
+                src="/images/imara-banner.webp"
                 className="img-fluid w-100"
                 alt="hero-img"
             />
@@ -10,7 +10,7 @@ const HeroSection = ({ scrollToParks }) => {
             {/* Dark overlay */}
             <div
                 className="position-absolute top-0 start-0 w-100 h-100"
-                style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
+                style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
             ></div>
 
             {/* Text Content */}

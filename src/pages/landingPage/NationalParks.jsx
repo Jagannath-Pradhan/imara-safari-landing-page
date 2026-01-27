@@ -8,7 +8,7 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
         {
             id: 1,
             name: "Serengeti",
-            image: "/images/national-parks/serengeti.webp",
+            image: "/images/national-parks/serengeti.jpg",
             description:
                 "Endless savannahs famous for the Great Migration, predator sightings, open landscapes, and classic game drives throughout different seasons.",
         },
@@ -22,14 +22,14 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
         {
             id: 3,
             name: "Tarangire",
-            image: "/images/national-parks/tarangire.webp",
+            image: "/images/national-parks/tarangire.jpg",
             description:
                 "Known for ancient baobab trees, large elephant herds, seasonal river wildlife, quieter game drives, and excellent dry-season sightings.",
         },
         {
             id: 4,
             name: "Lake Manyara",
-            image: "/images/national-parks/lake-manyara.webp",
+            image: "/images/national-parks/lake-manyara.jpg",
             description:
                 "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
         },
@@ -43,14 +43,14 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
         {
             id: 6,
             name: "Kilimanjaro",
-            image: "/images/national-parks/kilimanjaro.webp",
+            image: "/images/national-parks/kilimanjaro.jpg",
             description:
                 "Africa’s highest mountain offering trekking routes, changing habitats, crater views, and a challenging climb for adventurous travellers.",
         },
         {
             id: 7,
             name: "Zanzibar",
-            image: "/images/national-parks/zanzibar.webp",
+            image: "/images/national-parks/zanzibar.jpg",
             description:
                 "An island escape with white beaches, Swahili culture, historic Stone Town, spice farms, and relaxed coastal experiences after safari journeys.",
         },
@@ -137,7 +137,7 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
                                             <h5 className="card-title text-center text-uppercase mb-3">
                                                 {park.name}
                                             </h5>
-                                            <p className="card-text text-center">
+                                            <p className="card-text">
                                                 {park.description}
                                             </p>
                                         </div>

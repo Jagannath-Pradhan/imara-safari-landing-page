@@ -7,6 +7,7 @@ import PlanningSafari from './PlanningSafari';
 import ContactInformation from './ContactInformation';
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navbar";
 
 const LandingForm = () => {
     const parksRef = useRef(null);
@@ -156,6 +157,7 @@ const LandingForm = () => {
 
     return (
         <div>
+            {/* <Navbar /> */}
             <HeroSection scrollToParks={() => parksRef.current?.scrollIntoView({ behavior: "smooth" })} />
 
             <NationalParks
