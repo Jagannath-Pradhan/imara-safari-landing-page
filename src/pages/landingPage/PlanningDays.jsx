@@ -63,7 +63,7 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
                             className="col-6 col-lg-3 mb-4 d-flex"
                         >
                             <div
-                                className={`card shadow park-card h-100 d-flex flex-column ${isDaySelected(day.id) ? "selected" : ""
+                                className={`card shadow park-card d-flex flex-column ${isDaySelected(day.id) ? "selected" : ""
                                     }`}
                                 onClick={() => handleDayClick(day)}
                                 style={{ cursor: "pointer" }}
@@ -78,7 +78,7 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
                                     {/* Image overlay with tick */}
                                     {isDaySelected(day.id) && (
                                         <div
-                                            className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                            className="position-absolute top-0 start-0 w-100 d-flex align-items-center justify-content-center"
                                             style={{
                                                 backgroundColor: "rgba(255, 255, 255, 0.2)",
                                                 transition: "all 0.3s ease"

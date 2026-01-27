@@ -44,7 +44,7 @@ const SafariStyle = forwardRef(
                         {safariStyles.map((style) => (
                             <div key={style.id} className="col-6 col-lg-3 mb-4 d-flex">
                                 <div
-                                    className={`card shadow park-card h-100 d-flex flex-column ${isStyleSelected(style.id) ? "selected" : ""
+                                    className={`card shadow park-card d-flex flex-column ${isStyleSelected(style.id) ? "selected" : ""
                                         }`}
                                     onClick={() => handleStyleClick(style)}
                                     style={{ cursor: "pointer" }}
@@ -59,7 +59,7 @@ const SafariStyle = forwardRef(
 
                                         {isStyleSelected(style.id) && (
                                             <div
-                                                className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                                className="position-absolute top-0 start-0 w-100 d-flex align-items-center justify-content-center"
                                                 style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
                                             >
                                                 <div

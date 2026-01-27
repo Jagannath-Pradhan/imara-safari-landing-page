@@ -8,7 +8,8 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
         {
             id: 1,
             name: "Serengeti",
-            image: "/images/national-parks/serengeti.jpg",
+            // image: "/images/national-parks/serengeti.jpg",
+            image: "/images/national-parks/demo-pic1.webp",
             description:
                 "Endless savannahs famous for the Great Migration, predator sightings, open landscapes, and classic game drives throughout different seasons.",
         },
@@ -96,13 +97,13 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
                                 className="col-6 col-lg-3 mb-4 d-flex"
                             >
                                 <div
-                                    className={`card shadow h-100 d-flex flex-column park-card ${selectedParks.includes(park.name) ? 'selected' : ''}`}
+                                    className={`card shadow d-flex flex-column park-card ${selectedParks.includes(park.name) ? 'selected' : ''}`}
                                     onClick={() => handleParkClick(park.name)}
                                 >
                                     <div className="park-img-wrapper position-relative">
                                         <img
                                             src={park.image}
-                                            className="w-100 h-100 park-img"
+                                            className="w-100 park-img"
                                             alt={`${park.name} image`}
                                             style={{ objectFit: "cover" }}
                                         />
