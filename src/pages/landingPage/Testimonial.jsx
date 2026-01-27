@@ -11,8 +11,8 @@ const Testimonial = () => {
             id: 1,
             rating: 5,
             title: "What an Experience!",
-            review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaeratSerengeti (2 days), and the Ngorongoro Crater. We had an absolutely wonderful experience.",
-            name: "Roman K.",
+            review: "An unforgettable journey with Imara Kileleni Safaris, perfectly organized, knowledgeable guides, breathtaking wildlife, and warm hospitality throughout. Every detail exceeded expectations and created lifelong memories of Tanzania’s wild beauty.",
+            name: "— Sarah M.",
             date: "January 2023",
             image: "./images/testimonials/testimonial-1.jpg"
         },
@@ -20,8 +20,8 @@ const Testimonial = () => {
             id: 2,
             rating: 5,
             title: "One of the Best Experiences of My Life! Memories Forever!",
-            review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaeratto having the best guide and driver we could have ever wished for.",
-            name: "Melissa Y.",
+            review: "Imara Kileleni Safaris delivered an exceptional safari experience, seamless logistics, luxury camps, and incredible game drives. The team’s professionalism and local knowledge made our adventure safe, inspiring, and memorable.",
+            name: "— James K.",
             date: "January 2023",
             image: "./images/testimonials/testimonial-2.jpg"
         },
@@ -29,8 +29,8 @@ const Testimonial = () => {
             id: 3,
             rating: 5,
             title: "Amazing Mikumi!",
-            review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaeratentire flora and fauna. We spent 3 days in Mikumi National Park in Tanzania.",
-            name: "Karolina S.",
+            review: "From start to finish, Imara Kileleni Safaris provided outstanding service, cultural insight, and unforgettable wildlife encounters. Our safari felt personal, well guided, and perfectly paced for relaxation and adventure.",
+            name: "— Amina L.",
             date: "November 2022",
             image: "./images/testimonials/testimonial-3.jpg"
         }

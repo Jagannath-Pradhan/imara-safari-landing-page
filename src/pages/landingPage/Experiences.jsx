@@ -4,20 +4,8 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 
-// const images = [
-//   "./images/experiences/experience-fig-1.jpg",
-//   "./images/experiences/experience-fig-2.jpg",
-//   "./images/experiences/experience-fig-3.jpg",
-//   "./images/experiences/experience-fig-4.jpg",
-//   "./images/experiences/experience-fig-5.jpg",
-//   "./images/experiences/experience-fig-6.webp",
-//   "./images/experiences/experience-fig-7.jpg",
-//   "./images/experiences/experience-fig-8.jpg",
-//   "./images/experiences/experience-fig-9.jpg",
-//   "./images/experiences/experience-fig-10.jpg",
-// ];
 const images = [
-  "./images/exp/experience-fig-1.jpg",
+  "./images/exp/experience-fig-1.webp",
   "./images/exp/experience-fig-2.jpg",
   "./images/exp/experience-fig-3.jpg",
   "./images/exp/experience-fig-4.jpg",

@@ -2,24 +2,21 @@ const HeroSection = ({ scrollToParks }) => {
     return (
         <header className="hero-section-container position-relative text-white" >
             <div className="makklo_jsd">
-            <div className="imara-landing-logo">
-                <img src="./images/imaralogo.png" alt="" />
-            </div>
+                <div className="imara-landing-logo">
+                    <img src="./images/imaralogo.png" alt="imara-logo" />
+                </div>
             </div>
             <img
-                // src="/images/imara-banner.webp"
-                // src="/images/banner.png"
-                // src="/images/banner-image-2.webp"
                 src="/images/banner-img-12.jpg"
                 className="img-fluid w-100"
                 alt="hero-img"
             />
 
             {/* Dark overlay */}
-            <div
+            {/* <div
                 className="position-absolute top-0 start-0 w-100 h-100"
-                style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-            ></div>
+                style={{ backgroundColor: "rgba(0,0,0,0.1)" }}
+            ></div> */}
 
             {/* Text Content */}
             <div className="hero-text position-absolute top-50 start-50 translate-middle text-center">

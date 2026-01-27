@@ -36,25 +36,25 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
         },
         {
             id: 5,
-            name: "Ngorongoro Crater",
-            image: "/images/national-parks/ngorongoro-crater.webp",
-            description:
-                "A volcanic caldera offering dense wildlife viewing, scenic viewpoints, black rhinos, flamingos, and short travel distances within the crater floor.",
-            },
-        {
-            id: 6,
-            name: "Arusha National Park",
+            name: "Arusha",
             image: "/images/national-parks/arusha.webp",
             description:
                 "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
         },
         {
-            id: 7,
+            id: 6,
             name: "Zanzibar",
             image: "/images/national-parks/zanzibar.jpg",
             description:
                 "An island escape with white beaches, Swahili culture, historic Stone Town, spice farms, and relaxed coastal experiences after safari journeys.",
         },
+        {
+            id: 7,
+            name: "Ngorongoro Crater",
+            image: "/images/national-parks/ngorongoro-crater.webp",
+            description:
+                "A volcanic caldera offering dense wildlife viewing, scenic viewpoints, black rhinos, flamingos, and short travel distances within the crater floor.",
+            },
         {
             id: 8,
             name: "Not Sure / Other",
