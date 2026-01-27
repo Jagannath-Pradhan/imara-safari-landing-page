@@ -15,10 +15,10 @@ const HeroSection = ({ scrollToParks }) => {
             />
 
             {/* Dark overlay */}
-            {/* <div
+            <div
                 className="position-absolute top-0 start-0 w-100 h-100"
                 style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-            ></div> */}
+            ></div>
 
             {/* Text Content */}
             <div className="hero-text position-absolute top-50 start-50 translate-middle text-center">

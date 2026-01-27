@@ -16,7 +16,7 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
         {
             id: 2,
             name: "Tarangire",
-            image: "/images/national-parks/tarangire.jpg",
+            image: "/images/national-parks/tarangire.webp",
             description:
                 "Known for ancient baobab trees, large elephant herds, seasonal river wildlife, quieter game drives, and excellent dry-season sightings.",
         },
