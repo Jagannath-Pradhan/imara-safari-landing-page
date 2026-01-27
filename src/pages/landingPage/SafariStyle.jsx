@@ -34,10 +34,10 @@ const SafariStyle = forwardRef(
                     <div className="row">
                         <div className="col-12 mb-lg-4">
                             <h3 className="text-capitalize">
-                                3. Which safari style do you prefer?
+                                3. What kind of safari suits you?
                             </h3>
                             <p>
-                                Tell us your preferences, and we’ll create your dream safari.
+                                Select the safari style you prefer from budget economy or luxury options, or choose not to decide if you would like guidance.
                             </p>
                         </div>
 

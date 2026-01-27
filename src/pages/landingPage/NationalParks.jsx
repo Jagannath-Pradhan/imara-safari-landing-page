@@ -10,56 +10,56 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
             name: "Serengeti",
             image: "/images/national-parks/serengeti.webp",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
+                "Endless savannahs famous for the Great Migration, predator sightings, open landscapes, and classic game drives throughout different seasons.",
         },
         {
             id: 2,
             name: "Ngorongoro Crater",
             image: "/images/national-parks/ngorongoro-crater.webp",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
+                "A volcanic caldera offering dense wildlife viewing, scenic viewpoints, black rhinos, flamingos, and short travel distances within the crater floor.",
         },
         {
             id: 3,
             name: "Tarangire",
             image: "/images/national-parks/tarangire.webp",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
+                "Known for ancient baobab trees, large elephant herds, seasonal river wildlife, quieter game drives, and excellent dry-season sightings.",
         },
         {
             id: 4,
             name: "Lake Manyara",
             image: "/images/national-parks/lake-manyara.webp",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
+                "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
         },
         {
             id: 5,
-            name: "Arusha",
+            name: "Arusha National Park",
             image: "/images/national-parks/arusha.webp",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
+                "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
         },
         {
             id: 6,
             name: "Kilimanjaro",
             image: "/images/national-parks/kilimanjaro.webp",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
+                "Africa’s highest mountain offering trekking routes, changing habitats, crater views, and a challenging climb for adventurous travellers.",
         },
         {
             id: 7,
             name: "Zanzibar",
             image: "/images/national-parks/zanzibar.webp",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat",
+                "An island escape with white beaches, Swahili culture, historic Stone Town, spice farms, and relaxed coastal experiences after safari journeys.",
         },
         {
             id: 8,
             name: "Not Sure / Other",
             image: "/images/national-parks/not-sure.webp",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaeratn you.",
+                "Unsure where to go or considering something different? Share your ideas, and we’ll suggest destinations matching your interests and travel style.",
         }
     ];
 
@@ -84,11 +84,10 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
                     <div className="row">
                         <div className="col-12 mb-lg-4">
                             <h3 className="text-capitalize">
-                                1. Which national parks would you like to visit?
+                                1. Which parts of Tanzania would you like to explore?
                             </h3>
                             <p>
-                                Please select the national parks in Tanzania that you would like to visit.
-                                If you would like advice, please choose the last option.
+                                Choose the national parks and regions that interest you most to help us design a Tanzania safari that matches your travel goals, pace, and experience.
                             </p>
                         </div>
                         {parks.map((park) => (

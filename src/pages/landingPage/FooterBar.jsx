@@ -5,7 +5,7 @@ const FooterBar = () => {
                 <div className="row">
                     <div className="col-12">
                         <p className="text-center">
-                            We strive to provide an online experience that is continuously improving. By submitting your information, you agree to the use of your data as described in our Privacy Policy, so that we can best meet your personal needs. You can unsubscribe from communications at any time.
+                            We aim to create an online experience that continues to improve over time. By sharing your details, you agree to how we use your information under our Privacy Policy, helping us better respond to your needs. You can unsubscribe from communication at any time, easily, without pressure or obligation.
                         </p>
                     </div>
                 </div>

@@ -25,11 +25,10 @@ const Experiences = () => {
         <div className="row">
           <div className="col-12 mb-lg-4 text-center">
             <h2 className="text-capitalize">
-              EXPERIENCE TANZANIA LIKE NEVER BEFORE
+              Moments From Our Safaris
             </h2>
             <p>
-              Be inspired by the travel experiences of our customers and discover
-              the heart of Africa.
+              Images capturing wildlife landscapes, lodges, people, and quiet details from real safari journeys across Tanzania
             </p>
           </div>
         </div>

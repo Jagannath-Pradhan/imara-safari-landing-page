@@ -7,26 +7,23 @@
   font-display: swap;
 }
 /* AcuminPro */
-@font-face {
+/* @font-face {
   font-family: "AcuminPro-Semibold";
   src: url("/fonts/fonnts.com-AcuminPro-Semibold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  /* font-display: swap; */
-}
+} */
 
 @font-face {
-  font-family: "AcuminPro-Bold";
+  font-family: "fonts.com-AcuminPro-Bold";
   src: url("/fonts/fonnts.com-AcuminPro-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  /* font-display: swap; */
 }
 
 @font-face {
-  font-family: "AcuminPro-Black";
+  font-family: "AcuminPro";
   src: url("/fonts/fonnts.com-AcuminPro-Black.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  /* font-display: swap; */
 }

@@ -50,10 +50,10 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
                 <div className="row">
                     <div className="col-12 mb-lg-4">
                         <h3 className="text-capitalize">
-                            2. How many days are you planning for your Tanzania safari?
+                            2. How long do you want to travel?
                         </h3>
                         <p>
-                            Select the duration that best fits your schedule and interests.
+                            Tell us how many days you have available so we can plan distances, wildlife viewing, rest time, and logistics for a smooth Tanzania safari.
                         </p>
                     </div>
 

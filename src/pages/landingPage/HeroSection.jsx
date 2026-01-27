@@ -35,18 +35,18 @@ const HeroSection = ({ scrollToParks }) => {
 
                 <h1 className="fw-bold text-uppercase text-center">
                     <span className="d-none d-sm-inline text-nowrap">
-                        Your Tanzania Safari Begins Here
+                        Plan Your Tanzania Safari Here
                     </span>
 
                     <span className="d-inline d-sm-none">
-                        Your Tanzania Safari <br />
-                        Begins Here
+                        Plan Your Tanzania <br />
+                        Safari Here
                     </span>
                 </h1>
 
                 {/* Description */}
                 <p className="fw-bold text-white mt-3">
-                    From stunning national parks to majestic mountains and pristine white sand beaches
+                    Tailor-made safari journeys across Tanzania guided by timing landscapes and expertise.
                 </p>
 
                 <button

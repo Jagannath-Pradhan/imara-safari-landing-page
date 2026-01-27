@@ -27,10 +27,10 @@ const ContactInformation = ({ onSubmit, submitError }) => {
                 <div className="row">
                     <div className="col-12 mb-lg-4">
                         <h3 className="text-capitalize">
-                            5. Contact Information
+                            5. Share Your Details Here
                         </h3>
                         <p>
-                            We will send you offers via email. Your contact information will remain confidential and will only be used for <span className="fw-bold">safari offers in Tanzania.</span>
+                            Leave your contact information so our safari specialists can connect with you, share ideas, answer questions, and begin planning.
                         </p>
                     </div>
                     <div className="col-12 col-lg-6 mx-auto">

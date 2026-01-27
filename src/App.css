@@ -35,7 +35,7 @@ body {
 }
 
 h1 {
-    font-family: "AcuminPro-Black" !important;
+    font-family: "AcuminPro" !important;
     font-size: 3rem !important;
 }
 
@@ -46,12 +46,12 @@ h1 {
 }
 
 h2 {
-    font-family: "AcuminPro-Black" !important;
+    font-family: "AcuminPro" !important;
     /* font-size: 2.75rem !important; */
 }
 
 h3 {
-    font-family: "AcuminPro-Black" !important;
+    font-family: "AcuminPro" !important;
     font-size: 1.875rem !important;
 }
 
@@ -71,7 +71,7 @@ p {
 }
 
 h5 {
-    font-family: "AcuminPro-Semibold" !important;
+    font-family: "fonts.com-AcuminPro-Bold" !important;
 }
 
 /* utility classes end */

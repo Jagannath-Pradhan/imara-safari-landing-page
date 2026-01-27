@@ -185,11 +185,10 @@ const PlanningSafari = ({ scrollToContactInformation, onChange }) => {
             <div className="row">
                 <div className="col-12">
                     <h3 className="text-capitalize">
-                        4. When Are You Planning Your Safari?
+                        4. When would you like to travel?
                     </h3>
                     <p>
-                        Please let us know your travel dates. If they are not yet fixed,
-                        please provide your approximate travel period.
+                        Your travel dates help us understand wildlife movement, park conditions, crowd levels, and lodge availability to plan the best Tanzania safari.
                     </p>
                 </div>
             </div>

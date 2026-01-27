@@ -2,31 +2,31 @@ const Benefits = () => {
     const benefitsData = [
         {
             id: 1,
-            title: "Transparent Prices",
+            title: "Local Safari Experts",
             image: "/images/benefits/transparent-prices.png",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi assumenda blanditiis accusantium doloribus minus temporibus sint vero saepe, laborum iusto, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat, aliquid perferendis provident dicta.",
+                "We live here. We drive these roads, watch seasons shift, hear guides talk daily. That lived knowledge quietly influences routes, timing, lodge choices, and small decisions that often make the difference for travelers who notice.",
         },
         {
             id: 2,
-            title: "You Save Time",
+            title: "Tailored Travel Planning",
             image: "/images/benefits/save-time.png",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi assumenda blanditiis accusantium doloribus minus temporibus sint vero saepe, laborum iusto, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat, aliquid perferendis provident dicta.",
+                "No two travellers arrive the same. We listen first, then plan days that feel unforced, balancing drives, wildlife time, rest, and budgets without squeezing too much into each sunrise, or afternoon quietly unfolding naturally together.",
         },
         {
             id: 3,
-            title: "We Love What We Do!",
+            title: "Trusted Safari Operations",
             image: "/images/benefits/we-love-what-we-do.png",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi assumenda blanditiis accusantium doloribus minus temporibus sint vero saepe, laborum iusto, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat, aliquid perferendis provident dicta.",
+                "Safaris work when small things don’t fail. Vehicles matter. Guides matter more. So we choose people and partners we trust, focusing on safety, clear communication, and steady support from arrival to farewell moments on journey.",
         },
         {
             id: 4,
-            title: "Our Experience",
+            title: "Honest Local Pricing",
             image: "/images/benefits/our-experience.png",
             description:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi assumenda blanditiis accusantium doloribus minus temporibus sint vero saepe, laborum iusto, in eaque. Pariatur expedita quod, recusandae quae, numquam voluptatem modi quaerat, aliquid perferendis provident dicta.",
+                "We believe pricing should feel understandable, not awkward. Being based here lets us explain costs clearly, adjust options honestly, and match expectations with real value across budget, economy, and luxury safaris, without surprises later.",
         },
     ];
 
@@ -39,7 +39,7 @@ const Benefits = () => {
                             Your Benefits
                         </h3>
                         <h2 className="text-uppercase">
-                            Relax and Enjoy Your Vacation
+                            Why Choose Imara Kileleni Safaris?
                         </h2>
                     </div>
                 </div>
