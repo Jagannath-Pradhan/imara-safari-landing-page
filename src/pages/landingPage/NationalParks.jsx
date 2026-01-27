@@ -23,7 +23,7 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
         {
             id: 3,
             name: "Lake Manyara",
-            image: "/images/national-parks/lake-manyara.jpg",
+            image: "/images/national-parks/lake-manyara.webp",
             description:
                 "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
         },

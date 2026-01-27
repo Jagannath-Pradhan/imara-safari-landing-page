@@ -8,12 +8,12 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
         {
             id: 1,
             name: "4 to 6 Days",
-            image: "/images/planning-days/4-6-days.jpg"
+            image: "/images/planning-days/4-6-days.webp"
         },
         {
             id: 2,
             name: "6 to 8 Days",
-            image: "/images/planning-days/6-8-days.jpg"
+            image: "/images/planning-days/6-8-days.webp"
         },
         {
             id: 3,
@@ -23,7 +23,7 @@ const PlanningDays = ({ scrollToSafariStyle, onChange }) => {
         {
             id: 4,
             name: "12+ Days",
-            image: "/images/planning-days/12-plus-days.jpg"
+            image: "/images/planning-days/12-plus-days.webp"
         }
     ];
 
