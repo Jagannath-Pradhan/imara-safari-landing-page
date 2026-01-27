@@ -9,7 +9,8 @@ const HeroSection = ({ scrollToParks }) => {
             <img
                 // src="/images/imara-banner.webp"
                 // src="/images/banner.png"
-                src="/images/banner-image-2.webp"
+                // src="/images/banner-image-2.webp"
+                src="/images/banner-img-12.jpg"
                 className="img-fluid w-100"
                 alt="hero-img"
             />
