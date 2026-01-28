@@ -72,8 +72,6 @@ import { Check } from "lucide-react";
     //     );
     // };
 
-
-
     const handleParkClick = (parkName) => {
     setSelectedParks(prev => {
         const updated =
