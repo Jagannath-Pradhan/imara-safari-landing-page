@@ -19,7 +19,7 @@ const ContactInformation = forwardRef(
 
         const handleSubmit = (e) => {
             e.preventDefault();
-            onSubmit(contact); //  SEND DATA TO PARENT
+            onSubmit(contact); //  send data to parent
         };
 
         return (

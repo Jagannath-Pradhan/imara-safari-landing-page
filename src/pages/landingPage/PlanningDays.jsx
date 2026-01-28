@@ -29,8 +29,8 @@ const PlanningDays = forwardRef(
         ];
 
         const handleDayClick = (day) => {
-            setSelectedDay(day.id);   // UI state
-            onChange(day.name);       // SEND TO PARENT
+            setSelectedDay(day.id);   // ui state
+            onChange(day.name);       // send to parent
             console.log(day.name)
             scrollToSafariStyle();    // keep existing behavior
         };
@@ -68,7 +68,7 @@ const PlanningDays = forwardRef(
                                             alt={`${day.name} image`}
                                         />
 
-                                        {/* Image overlay with tick */}
+                                        {/* image overlay with tick */}
                                         {isDaySelected(day.id) && (
                                             <div
                                                 className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
@@ -87,7 +87,6 @@ const PlanningDays = forwardRef(
                                         )}
                                     </div>
 
-                                    {/* SAME BODY OVERLAY STRUCTURE AS NationalParks */}
                                     <div className="park-card-body-wrapper">
                                         <div className="card-body d-flex flex-column justify-content-center">
                                             <h5 className="card-title text-center text-uppercase">

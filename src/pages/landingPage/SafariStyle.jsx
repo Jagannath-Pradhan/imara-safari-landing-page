@@ -13,8 +13,8 @@ const SafariStyle = forwardRef(
         ];
 
         const handleStyleClick = (style) => {
-            setSelectedStyle(style.id);  // UI state
-            onChange(style.name);        // SEND TO PARENT
+            setSelectedStyle(style.id);  // ui state
+            onChange(style.name);        // send to parent
             console.log(style.name)
             scrollToPlanningSafari();    // keep behavior
         };
@@ -63,7 +63,6 @@ const SafariStyle = forwardRef(
                                         )}
                                     </div>
 
-                                    {/* 🔥 SAME BODY OVERLAY STRUCTURE */}
                                     <div className="park-card-body-wrapper">
                                         <div className="card-body d-flex align-items-center justify-content-center">
                                             <h5 className="card-title text-uppercase mb-0">{style.name}</h5>
@@ -76,7 +75,6 @@ const SafariStyle = forwardRef(
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         ))}
                     </div>

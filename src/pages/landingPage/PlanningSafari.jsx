@@ -2,15 +2,16 @@ import { forwardRef, useState } from 'react';
 
 const PlanningSafari = forwardRef(
     ({ scrollToContactInformation, onChange }, ref) => {
-        const [selectedDate, setSelectedDate] = useState(null);
-        const [view, setView] = useState('year'); // 'year' or 'month'
-        const [currentYear, setCurrentYear] = useState(2026);
-        const [selectedMonth, setSelectedMonth] = useState(null);
-
         const today = new Date();
         const currentDate = today.getDate();
         const currentMonth = today.getMonth();
         const currentYearToday = today.getFullYear();
+
+        const [selectedDate, setSelectedDate] = useState(null);
+        const [view, setView] = useState('year'); // 'year' or 'month'
+        const [currentYear, setCurrentYear] = useState(currentYearToday);
+        const [selectedMonth, setSelectedMonth] = useState(null);
+
 
         const months = [
             'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
@@ -19,16 +20,16 @@ const PlanningSafari = forwardRef(
 
         const handleYearChange = (increment) => {
             const newYear = currentYear + increment;
-            // User can't go to years before current year
+            // user can't go to years before current year
             if (newYear >= currentYearToday) {
                 setCurrentYear(newYear);
             }
         };
 
         const handleMonthClick = (monthIndex) => {
-            // Check if the month is in the past
+            // check if the month is in the past
             if (currentYear === currentYearToday && monthIndex < currentMonth) {
-                return; // Don't allow selection of past months
+                return; // don't allow selection of past months
             }
             setSelectedMonth(monthIndex);
             setView('month');
@@ -44,14 +45,13 @@ const PlanningSafari = forwardRef(
             const selected = new Date(currentYear, selectedMonth, day);
 
             const formattedDate = `${String(day).padStart(2, '0')}-${String(selectedMonth + 1).padStart(2, '0')}-${currentYear}`;
-            setSelectedDate(selected);       // UI state
-            onChange(formattedDate);        // SEND DATE (correct)
+            setSelectedDate(selected);       // ui state
+            onChange(formattedDate);       
             console.log(formattedDate);
             scrollToContactInformation();
 
             scrollToContactInformation();
         };
-
 
         const getDaysInMonth = (year, month) => {
             return new Date(year, month + 1, 0).getDate();
@@ -66,7 +66,7 @@ const PlanningSafari = forwardRef(
             const firstDay = getFirstDayOfMonth(currentYear, selectedMonth);
             const days = [];
 
-            // Previous month's trailing days
+            // previous month's trailing days
             const prevMonthDays = getDaysInMonth(
                 selectedMonth === 0 ? currentYear - 1 : currentYear,
                 selectedMonth === 0 ? 11 : selectedMonth - 1
@@ -84,7 +84,7 @@ const PlanningSafari = forwardRef(
                 );
             }
 
-            // Current month's days
+            // current month's days
             for (let day = 1; day <= daysInMonth; day++) {
                 const isPast =
                     currentYear === currentYearToday &&
@@ -127,7 +127,7 @@ const PlanningSafari = forwardRef(
                 );
             }
 
-            // Next month's leading days
+            // next month's leading days
             const totalCells = Math.ceil(days.length / 7) * 7;
             const remainingCells = totalCells - days.length;
 
@@ -157,7 +157,7 @@ const PlanningSafari = forwardRef(
                 return;
             }
 
-            // MONTH VIEW LOGIC
+            // month view logic
             let newMonth = selectedMonth + direction;
             let newYear = currentYear;
 
@@ -233,7 +233,6 @@ const PlanningSafari = forwardRef(
                                 </div>
 
                                 {view === 'year' ? (
-                                    // <div className="row g-3 justify-content-center">
                                     <div
                                         className="d-grid"
                                         style={{
@@ -243,7 +242,6 @@ const PlanningSafari = forwardRef(
                                     >
 
                                         {months.map((month, index) => (
-                                            // <div key={month} className="col-6 col-sm-4 col-md-3">
                                             <div key={month}>
 
                                                 <button
@@ -253,13 +251,16 @@ const PlanningSafari = forwardRef(
 
                                                     style={{
                                                         backgroundColor:
-                                                            index === 0 && currentYear === 2026 ? '#d87028' : '#fff',
+                                                            index === currentMonth && currentYear === currentYearToday
+                                                                ? '#d87028'
+                                                                : '#fff',
                                                         color:
-                                                            index === 0 && currentYear === 2026
+                                                            index === currentMonth && currentYear === currentYearToday
                                                                 ? '#fff'
                                                                 : isMonthDisabled(index)
                                                                     ? '#ccc'
                                                                     : '#000',
+
                                                         border: '1px solid #dee2e6',
                                                         borderRadius: '6px',
                                                         fontSize: '0.95rem',
@@ -267,7 +268,6 @@ const PlanningSafari = forwardRef(
                                                         cursor: isMonthDisabled(index) ? 'not-allowed' : 'pointer',
                                                         opacity: isMonthDisabled(index) ? 0.5 : 1,
                                                     }}
-
                                                 >
                                                     {month}
                                                 </button>

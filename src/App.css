@@ -9,11 +9,9 @@ body {
     overflow-x: hidden !important;
 }
 
-
 body {
     font-family: "Soleil" !important;
 }
-
 
 .bg-theme-light {
     background-color: #fcfcfc !important;
@@ -26,7 +24,7 @@ body {
     transition: background-color 0.5s !important;
 
     &:hover {
-        background-color: #d87028 !important;
+        background-color: #ef6d0f !important;
     }
 }
 
@@ -47,7 +45,6 @@ h1 {
 
 h2 {
     font-family: "AcuminPro" !important;
-    /* font-size: 2.75rem !important; */
 }
 
 h3 {
@@ -67,7 +64,6 @@ h3 {
 
 p {
     font-family: "Soleil" !important;
-    /* color: #444 !important; */
 }
 
 h5 {
@@ -75,6 +71,7 @@ h5 {
 }
 
 /* utility classes end */
+
 
 
 /* hero section start */
@@ -132,11 +129,9 @@ h5 {
     transition: background-color 0.5s;
 
     &:hover {
-        background-color: black;
+        background-color: #ef6d0f !important;
     }
 }
-
-/* desktop */
 
 @media (max-width: 992px) {
     header img {
@@ -158,7 +153,6 @@ h5 {
     }
 }
 
-/* tablet */
 @media (max-width: 768px) {
     header img {
         height: 85vh !important;
@@ -179,7 +173,6 @@ h5 {
     }
 }
 
-/* mobile */
 @media (max-width: 576px) {
     header img {
         height: 65vh !important;
@@ -227,14 +220,12 @@ h5 {
     }
 }
 
-
-
 /* hero section end */
+
 
 
 /* national parks section start */
 
-/* Image wrapper */
 .park-img-wrapper {
     overflow: hidden;
 }
@@ -271,8 +262,6 @@ h5 {
 }
 
 .park-card.selected .card-body {
-    /* opacity: 0;
-    pointer-events: none; */
     background-color: rgba(216, 112, 40, 0.9);
     transition: background-color 0.3s ease;
 }
@@ -300,9 +289,6 @@ h5 {
     transition: 0.5s;
 }
 
-/* .national-parks-section .park-card-body-wrapper h5 {
-    color: #d87028 !important;
-} */
 .park-card {
     transition: all 0.3s ease;
 }
@@ -329,7 +315,6 @@ h5 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* MOBILE ONLY */
 @media (max-width: 767.98px) {
     section .col-6.col-lg-3.mb-4.d-flex {
         padding-right: 5px;
@@ -337,22 +322,19 @@ h5 {
         margin-bottom: 10px !important;
     }
 
-    /* Hide description text */
+    /* hide description text */
     .park-card .card-text {
         display: none;
     }
 
-    /* Hide sliding overlay entirely */
     .park-card .card-body-overlay {
         display: none;
     }
 
-    /* Reduce padding for compact look */
     .park-card .card-body {
         padding: 0.75rem;
     }
 
-    /* Slightly smaller title */
     .park-card .card-title {
         font-size: 0.95rem;
         margin-bottom: 0 !important;
@@ -442,15 +424,6 @@ h5 {
     }
 }
 
-/* .form-control:focus {
-    color: var(--bs-body-color)#212529;
-    background-color: var(--bs-body-bg);
-    border-color: #86b7fe;
-    border-color: #86b7fe;
-    outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
-}  */
-
 .form-control:focus,
 .form-select:focus {
     color: none !important;
@@ -464,10 +437,6 @@ h5 {
 
 
 /* benefits section start */
-/* .benefits-section {
-    background-color: #ffffff;
-    padding: 80px 0;
-} */
 
 .benefit-card {
     padding: 30px;
@@ -582,7 +551,6 @@ h5 {
 
 
 
-
 /* testimonial section start */
 
 .testimonial-swiper {
@@ -614,7 +582,6 @@ h5 {
     margin-bottom: 30px;
 }
 
-/* Review Text */
 .testimonial-review {
     font-size: 1.15rem;
     color: #888888;
@@ -624,7 +591,6 @@ h5 {
     margin: 0 auto 40px;
 }
 
-/* Author Info */
 .author-info {
     display: inline-flex;
     align-items: center;
@@ -654,7 +620,6 @@ h5 {
     margin: 0;
 }
 
-/* Swiper Pagination */
 .testimonial-swiper .swiper-pagination {
     bottom: 30px;
 }
@@ -673,7 +638,6 @@ h5 {
     border-radius: 6px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .testimonial-title {
         font-size: 1.5rem;
@@ -724,14 +688,13 @@ h5 {
 
 
 /* experiences section start */
-/* default (mobile & tablet) */
+
 .experience-img-wrapper img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* lg screens and above */
 @media (min-width: 992px) {
     .experience-img-wrapper {
         height: 220px;
@@ -745,10 +708,8 @@ h5 {
     }
 }
 
-
 .experience-img-wrapper.fixed-height {
     height: 260px;
-    /* adjust if needed */
     overflow: hidden;
     border-radius: 8px;
 }

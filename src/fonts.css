@@ -6,14 +6,8 @@
   font-style: normal;
   font-display: swap;
 }
-/* AcuminPro */
-/* @font-face {
-  font-family: "AcuminPro-Semibold";
-  src: url("/fonts/fonnts.com-AcuminPro-Semibold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-} */
 
+/* AcuminPro */
 @font-face {
   font-family: "fonts.com-AcuminPro-Bold";
   src: url("/fonts/fonnts.com-AcuminPro-Bold.ttf") format("truetype");

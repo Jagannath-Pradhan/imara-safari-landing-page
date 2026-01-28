@@ -17,7 +17,7 @@ const LandingForm = () => {
     const [submitError, setSubmitError] = useState("");
     const navigate = useNavigate();
 
-    // CENTRAL FORM STATE
+    // central form state
     const [formData, setFormData] = useState({
         parks: [],
         planningDays: "",
@@ -44,7 +44,7 @@ const LandingForm = () => {
             return { message: "Error ! Please Choose When You Are Planning For The Safari...!!!!!!", scroll: false };
         }
 
-        // CONTACT SECTION ERRORS (NO SCROLL)
+        // contact section errors 
         if (!contactData.fullName) {
             return { message: "Error ! Please Enter Your Full Name...!!!!!!", scroll: false };
         }
@@ -65,7 +65,7 @@ const LandingForm = () => {
             return { message: "Error ! Please Enter Number Of People...!!!!!!", scroll: false };
         }
 
-        return null; // ALL GOOD
+        return null; // all good
     };
 
     const updateFormData = (key, value) => {
@@ -78,7 +78,6 @@ const LandingForm = () => {
         if (error) {
             setSubmitError(error.message);
 
-            // ONLY SCROLL IF REQUIRED
             if (error.scroll) {
                 contactInfoRef.current?.scrollIntoView({ behavior: "smooth" });
             }
@@ -96,7 +95,7 @@ const LandingForm = () => {
         console.log("FINAL FORM DATA", finalData);
         toast.success("Your Information Submitted Successfully.");
 
-        // REDIRECT AFTER SHORT DELAY
+        // redirect after short delay
         setTimeout(() => {
             navigate("/thank-you");
         }, 2500);

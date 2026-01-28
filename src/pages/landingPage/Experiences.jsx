@@ -21,7 +21,6 @@ const Experiences = () => {
   return (
     <section className="experiences-section py-lg-5 py-4">
       <div className="container">
-        {/* Heading */}
         <div className="row">
           <div className="col-12 mb-lg-4 text-center">
             <h2 className="text-capitalize">
@@ -33,7 +32,6 @@ const Experiences = () => {
           </div>
         </div>
 
-        {/* ================= DESKTOP GRID ================= */}
         <div className="row g-2 mb-4 d-none d-md-flex">
           {images.map((img, index) => (
             <div
@@ -47,7 +45,6 @@ const Experiences = () => {
           ))}
         </div>
 
-        {/* ================= MOBILE / TABLET SWIPER ================= */}
         <div className="d-md-none">
           <Swiper
             modules={[Autoplay, Navigation]}

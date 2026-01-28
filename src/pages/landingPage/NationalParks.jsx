@@ -63,14 +63,6 @@ const NationalParks = forwardRef(({ onChange, scrollToPlanningDays }, ref) => {
         }
     ];
 
-    // const handleParkClick = (parkName) => {
-    //     setSelectedParks(prev =>
-    //         prev.includes(parkName)
-    //             ? prev.filter(p => p !== parkName)
-    //             : [...prev, parkName]
-    //     );
-    // };
-
     const handleParkClick = (parkName) => {
         setSelectedParks(prev => {
             const updated =
@@ -78,7 +70,7 @@ const NationalParks = forwardRef(({ onChange, scrollToPlanningDays }, ref) => {
                     ? prev.filter(p => p !== parkName)
                     : [...prev, parkName];
 
-            // SCROLL ONLY WHEN AT LEAST ONE PARK IS SELECTED
+            // scroll only when 1 park is selected
             if (updated.length > 0) {
                 scrollToPlanningDays?.();
             }
@@ -87,7 +79,7 @@ const NationalParks = forwardRef(({ onChange, scrollToPlanningDays }, ref) => {
         });
     };
 
-    // SYNC TO PARENT SAFELY
+    // sync to parent
     useEffect(() => {
         onChange(selectedParks);
         console.log(selectedParks)
@@ -123,7 +115,7 @@ const NationalParks = forwardRef(({ onChange, scrollToPlanningDays }, ref) => {
                                             style={{ objectFit: "cover" }}
                                         />
 
-                                        {/* Overlay layer when selected - ONLY ON IMAGE */}
+                                        {/* overlay layer when selected - only on image */}
                                         {selectedParks.includes(park.name) && (
                                             <div
                                                 className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
@@ -147,7 +139,7 @@ const NationalParks = forwardRef(({ onChange, scrollToPlanningDays }, ref) => {
                                         )}
                                     </div>
 
-                                    {/* Card Body with Sliding Layer Effect */}
+                                    {/* card body with sliding layer effect */}
                                     <div className="park-card-body-wrapper">
                                         <div className="card-body d-flex flex-column">
                                             <h5 className="card-title text-center text-uppercase mb-3">
@@ -158,7 +150,7 @@ const NationalParks = forwardRef(({ onChange, scrollToPlanningDays }, ref) => {
                                             </p>
                                         </div>
 
-                                        {/* Sliding overlay on card-body */}
+                                        {/* sliding overlay on card-body */}
                                         <div className="card-body-overlay">
                                             <div className="overlay-text-content">
                                                 <h5 className="text-uppercase mb-2" style={{
