@@ -42,9 +42,12 @@ const PlanningSafari = ({ scrollToContactInformation, onChange }) => {
 
         const selected = new Date(currentYear, selectedMonth, day);
 
-        setSelectedDate(selected);   // UI state
-        onChange(selected.toISOString().split("T")[0]); // SEND DATE
-        console.log(selected.toISOString().split("T")[0]); // SEND DATE
+        const formattedDate = `${String(day).padStart(2, '0')}-${String(selectedMonth + 1).padStart(2, '0')}-${currentYear}`;
+        setSelectedDate(selected);       // UI state
+        onChange(formattedDate);        // SEND DATE (correct)
+        console.log(formattedDate);
+        scrollToContactInformation();
+
         scrollToContactInformation();
     };
 

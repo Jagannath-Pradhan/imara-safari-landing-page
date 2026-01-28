@@ -102,7 +102,6 @@ const LandingForm = () => {
         }, 2500);
     };
 
-
     return (
         <>
             <HeroSection scrollToParks={() => parksRef.current?.scrollIntoView({ behavior: "smooth" })} />
@@ -119,13 +118,13 @@ const LandingForm = () => {
             /> */}
 
             <div ref={planningDaysRef}>
-    <PlanningDays
-        onChange={(day) => updateFormData("planningDays", day)}
-        scrollToSafariStyle={() =>
-            safariStyleRef.current?.scrollIntoView({ behavior: "smooth" })
-        }
-    />
-</div>
+                <PlanningDays
+                    onChange={(day) => updateFormData("planningDays", day)}
+                    scrollToSafariStyle={() =>
+                        safariStyleRef.current?.scrollIntoView({ behavior: "smooth" })
+                    }
+                />
+            </div>
 
             <SafariStyle
                 ref={safariStyleRef}
