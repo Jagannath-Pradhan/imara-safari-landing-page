@@ -191,7 +191,7 @@ h5 {
         width: 320px !important;
         padding-top: 20px !important;
     }
-    
+
     .hero-section-container .hero-text p {
         font-size: 14px !important;
     }
@@ -327,6 +327,11 @@ h5 {
 
 /* MOBILE ONLY */
 @media (max-width: 767.98px) {
+    section .col-6.col-lg-3.mb-4.d-flex {
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-bottom: 10px !important;
+    }
 
     /* Hide description text */
     .park-card .card-text {

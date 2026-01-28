@@ -1,20 +1,20 @@
-import "swiper/css";
-import "swiper/css/navigation";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 
+import "swiper/css";
+import "swiper/css/navigation";
+
 const images = [
-  "./images/exp/experience-fig-1.webp",
-  "./images/exp/experience-fig-2.jpg",
-  "./images/exp/experience-fig-3.jpg",
-  "./images/exp/experience-fig-4.jpg",
-  "./images/exp/experience-fig-5.jpg",
-  "./images/exp/experience-fig-6.jpg",
-  "./images/exp/experience-fig-7.jpg",
-  "./images/exp/experience-fig-8.jpg",
-  "./images/exp/experience-fig-9.jpg",
-  "./images/exp/experience-fig-10.jpg",
+  "./images/experiences/exp-fig-1.webp",
+  "./images/experiences/exp-fig-2.webp",
+  "./images/experiences/exp-fig-3.webp",
+  "./images/experiences/exp-fig-4.webp",
+  "./images/experiences/exp-fig-5.webp",
+  "./images/experiences/exp-fig-6.webp",
+  "./images/experiences/exp-fig-7.webp",
+  "./images/experiences/exp-fig-8.webp",
+  "./images/experiences/exp-fig-9.webp",
+  "./images/experiences/exp-fig-10.webp",
 ];
 
 const Experiences = () => {

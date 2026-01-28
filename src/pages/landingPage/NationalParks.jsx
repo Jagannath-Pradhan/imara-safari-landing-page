@@ -8,7 +8,6 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
         {
             id: 1,
             name: "Serengeti",
-            // image: "/images/national-parks/serengeti.jpg",
             image: "/images/national-parks/demo-pic1.webp",
             description:
                 "Endless savannahs famous for the Great Migration, predator sightings, open landscapes, and classic game drives throughout different seasons.",
@@ -39,18 +38,18 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
             name: "Arusha",
             image: "/images/national-parks/arusha.webp",
             description:
-                "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
+            "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
         },
         {
             id: 6,
             name: "Zanzibar",
             image: "/images/national-parks/zanzibar.jpg",
             description:
-                "An island escape with white beaches, Swahili culture, historic Stone Town, spice farms, and relaxed coastal experiences after safari journeys.",
+            "An island escape with white beaches, Swahili culture, historic Stone Town, spice farms, and relaxed coastal experiences after safari journeys.",
         },
         {
             id: 7,
-            name: "Ngorongoro Crater",
+            name: "Ngorongoro",
             image: "/images/national-parks/ngorongoro-crater.webp",
             description:
                 "A volcanic caldera offering dense wildlife viewing, scenic viewpoints, black rhinos, flamingos, and short travel distances within the crater floor.",
