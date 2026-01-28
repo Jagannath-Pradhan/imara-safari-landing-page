@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const LandingForm = () => {
     const parksRef = useRef(null);
+    const planningDaysRef = useRef(null);
     const safariStyleRef = useRef(null);
     const planningSafariRef = useRef(null);
     const contactInfoRef = useRef(null);
@@ -109,12 +110,22 @@ const LandingForm = () => {
             <NationalParks
                 ref={parksRef}
                 onChange={(parks) => updateFormData("parks", parks)}
+                scrollToPlanningDays={() => planningDaysRef.current?.scrollIntoView({ behavior: "smooth" })}
             />
 
-            <PlanningDays
+            {/* <PlanningDays
                 onChange={(day) => updateFormData("planningDays", day)}
                 scrollToSafariStyle={() => safariStyleRef.current?.scrollIntoView({ behavior: "smooth" })}
-            />
+            /> */}
+
+            <div ref={planningDaysRef}>
+    <PlanningDays
+        onChange={(day) => updateFormData("planningDays", day)}
+        scrollToSafariStyle={() =>
+            safariStyleRef.current?.scrollIntoView({ behavior: "smooth" })
+        }
+    />
+</div>
 
             <SafariStyle
                 ref={safariStyleRef}
@@ -133,7 +144,7 @@ const LandingForm = () => {
                 <ContactInformation onSubmit={handleFinalSubmit} submitError={submitError} />
             </div>
 
-                {/* <PlanningSafari
+            {/* <PlanningSafari
                 ref={planningSafariRef}
                     onChange={(date) => updateFormData("travelDate", date)}
                     scrollToContactInformation={() => contactInfoRef.current?.scrollIntoView({ behavior: "smooth" })}

@@ -1,7 +1,8 @@
 import { forwardRef, useState, useEffect } from "react";
 import { Check } from "lucide-react";
 
-const NationalParks = forwardRef(({ onChange }, ref) => {
+// const NationalParks = forwardRef(({ onChange }, ref) => {
+    const NationalParks = forwardRef(({ onChange, scrollToPlanningDays }, ref) => {
     const [selectedParks, setSelectedParks] = useState([]);
 
     const parks = [
@@ -63,13 +64,31 @@ const NationalParks = forwardRef(({ onChange }, ref) => {
         }
     ];
 
+    // const handleParkClick = (parkName) => {
+    //     setSelectedParks(prev =>
+    //         prev.includes(parkName)
+    //             ? prev.filter(p => p !== parkName)
+    //             : [...prev, parkName]
+    //     );
+    // };
+
+
+
     const handleParkClick = (parkName) => {
-        setSelectedParks(prev =>
+    setSelectedParks(prev => {
+        const updated =
             prev.includes(parkName)
                 ? prev.filter(p => p !== parkName)
-                : [...prev, parkName]
-        );
-    };
+                : [...prev, parkName];
+
+        // SCROLL ONLY WHEN AT LEAST ONE PARK IS SELECTED
+        if (updated.length > 0) {
+                scrollToPlanningDays?.();
+        }
+
+        return updated;
+    });
+};
 
     // SYNC TO PARENT SAFELY
     useEffect(() => {
