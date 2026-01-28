@@ -19,7 +19,7 @@ const images = [
 
 const Experiences = () => {
   return (
-    <section className="experiences-section pt-lg-5 py-4">
+    <section className="experiences-section py-lg-5 py-4">
       <div className="container">
         {/* Heading */}
         <div className="row">

@@ -7,14 +7,14 @@ import LandingForm from './LandingForm';
 
 function LandingPage() {
     return (
-        <div>
+        <>
             <LandingForm />
             <Benefits />
             <Testimonial />
             <Experiences />
             <FooterBar />
             <Footer />
-        </div>
+        </>
     );
 }
 

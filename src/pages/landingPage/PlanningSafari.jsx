@@ -181,127 +181,127 @@ const PlanningSafari = ({ scrollToContactInformation, onChange }) => {
 
 
     return (
-        <div className="planning-safari-section container py-lg-5 py-4">
-            <div className="row">
-                <div className="col-12">
-                    <h3 className="text-capitalize">
-                        4. When would you like to travel?
-                    </h3>
-                    <p>
-                        Your travel dates help us understand wildlife movement, park conditions, crowd levels, and lodge availability to plan the best Tanzania safari.
-                    </p>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-12 d-flex justify-content-center">
-                    <div style={{ width: '320px' }}>
+        <section className="planning-safari-section py-lg-5 py-4">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <h3 className="text-capitalize">
+                            4. When would you like to travel?
+                        </h3>
+                        <p>
+                            Your travel dates help us understand wildlife movement, park conditions, crowd levels, and lodge availability to plan the best Tanzania safari.
+                        </p>
+                    </div>
+                    <div className="col-12 d-flex justify-content-center">
+                        <div style={{ width: '320px' }}>
 
-                        <div className="d-flex justify-content-center align-items-center mb-4">
-                            <button
-                                onClick={() => handleArrowClick(-1)}
-                                className="btn btn-link text-dark"
-                                style={{
-                                    textDecoration: 'none',
-                                    fontSize: '1.2rem',
-                                    visibility:
-                                        view === 'year'
-                                            ? currentYear > currentYearToday
-                                                ? 'visible'
-                                                : 'hidden'
-                                            : 'visible',
-                                }}
-                            >
-                                «
-                            </button>
+                            <div className="d-flex justify-content-center align-items-center mb-4">
+                                <button
+                                    onClick={() => handleArrowClick(-1)}
+                                    className="btn btn-link text-dark"
+                                    style={{
+                                        textDecoration: 'none',
+                                        fontSize: '1.2rem',
+                                        visibility:
+                                            view === 'year'
+                                                ? currentYear > currentYearToday
+                                                    ? 'visible'
+                                                    : 'hidden'
+                                                : 'visible',
+                                    }}
+                                >
+                                    «
+                                </button>
 
-                            <h4 className="mx-4 mb-0" style={{ minWidth: '150px', textAlign: 'center', fontWeight: '600' }}>
-                                {view === 'year'
-                                    ? currentYear
-                                    : `${months[selectedMonth]} ${currentYear}`}
-                            </h4>
+                                <h4 className="mx-4 mb-0" style={{ minWidth: '150px', textAlign: 'center', fontWeight: '600' }}>
+                                    {view === 'year'
+                                        ? currentYear
+                                        : `${months[selectedMonth]} ${currentYear}`}
+                                </h4>
 
-                            <button
-                                onClick={() => handleArrowClick(1)}
-                                className="btn btn-link text-dark"
-                                style={{ textDecoration: 'none', fontSize: '1.2rem' }}
-                            >
-                                »
-                            </button>
+                                <button
+                                    onClick={() => handleArrowClick(1)}
+                                    className="btn btn-link text-dark"
+                                    style={{ textDecoration: 'none', fontSize: '1.2rem' }}
+                                >
+                                    »
+                                </button>
 
-                        </div>
-
-                        {view === 'year' ? (
-                            // <div className="row g-3 justify-content-center">
-                            <div
-                                className="d-grid"
-                                style={{
-                                    gridTemplateColumns: 'repeat(4, 1fr)',
-                                    gap: '12px',
-                                }}
-                            >
-
-                                {months.map((month, index) => (
-                                    // <div key={month} className="col-6 col-sm-4 col-md-3">
-                                    <div key={month}>
-
-                                        <button
-                                            onClick={() => handleMonthClick(index)}
-                                            disabled={isMonthDisabled(index)}
-                                            className="btn py-3 w-100 month-button"
-
-                                            style={{
-                                                backgroundColor:
-                                                    index === 0 && currentYear === 2026 ? '#d87028' : '#fff',
-                                                color:
-                                                    index === 0 && currentYear === 2026
-                                                        ? '#fff'
-                                                        : isMonthDisabled(index)
-                                                            ? '#ccc'
-                                                            : '#000',
-                                                border: '1px solid #dee2e6',
-                                                borderRadius: '6px',
-                                                fontSize: '0.95rem',
-                                                fontWeight: 500,
-                                                cursor: isMonthDisabled(index) ? 'not-allowed' : 'pointer',
-                                                opacity: isMonthDisabled(index) ? 0.5 : 1,
-                                            }}
-
-                                        >
-                                            {month}
-                                        </button>
-                                    </div>
-                                ))}
                             </div>
-                        ) : (
-                            <>
-                                <div className="d-grid mb-3" style={{ gridTemplateColumns: 'repeat(7, 1fr)', gap: '0.5rem' }}>
-                                    {['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map((day) => (
-                                        <div
-                                            key={day}
-                                            className="text-center fw-bold"
-                                            style={{ padding: '0.5rem', color: '#666' }}
-                                        >
-                                            {day}
+
+                            {view === 'year' ? (
+                                // <div className="row g-3 justify-content-center">
+                                <div
+                                    className="d-grid"
+                                    style={{
+                                        gridTemplateColumns: 'repeat(4, 1fr)',
+                                        gap: '12px',
+                                    }}
+                                >
+
+                                    {months.map((month, index) => (
+                                        // <div key={month} className="col-6 col-sm-4 col-md-3">
+                                        <div key={month}>
+
+                                            <button
+                                                onClick={() => handleMonthClick(index)}
+                                                disabled={isMonthDisabled(index)}
+                                                className="btn py-3 w-100 month-button"
+
+                                                style={{
+                                                    backgroundColor:
+                                                        index === 0 && currentYear === 2026 ? '#d87028' : '#fff',
+                                                    color:
+                                                        index === 0 && currentYear === 2026
+                                                            ? '#fff'
+                                                            : isMonthDisabled(index)
+                                                                ? '#ccc'
+                                                                : '#000',
+                                                    border: '1px solid #dee2e6',
+                                                    borderRadius: '6px',
+                                                    fontSize: '0.95rem',
+                                                    fontWeight: 500,
+                                                    cursor: isMonthDisabled(index) ? 'not-allowed' : 'pointer',
+                                                    opacity: isMonthDisabled(index) ? 0.5 : 1,
+                                                }}
+
+                                            >
+                                                {month}
+                                            </button>
                                         </div>
                                     ))}
                                 </div>
-                                <div className="d-grid" style={{ gridTemplateColumns: 'repeat(7, 1fr)', gap: '0.5rem' }}>
-                                    {renderCalendar()}
-                                </div>
-                                <div className="mt-4 text-center">
-                                    <button
-                                        onClick={() => setView('year')}
-                                        className="btn btn-theme"
-                                    >
-                                        Back to Months
-                                    </button>
-                                </div>
-                            </>
-                        )}
+                            ) : (
+                                <>
+                                    <div className="d-grid mb-3" style={{ gridTemplateColumns: 'repeat(7, 1fr)', gap: '0.5rem' }}>
+                                        {['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map((day) => (
+                                            <div
+                                                key={day}
+                                                className="text-center fw-bold"
+                                                style={{ padding: '0.5rem', color: '#666' }}
+                                            >
+                                                {day}
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div className="d-grid" style={{ gridTemplateColumns: 'repeat(7, 1fr)', gap: '0.5rem' }}>
+                                        {renderCalendar()}
+                                    </div>
+                                    <div className="mt-4 text-center">
+                                        <button
+                                            onClick={() => setView('year')}
+                                            className="btn btn-theme mb-3"
+                                        >
+                                            Back to Months
+                                        </button>
+                                    </div>
+                                </>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

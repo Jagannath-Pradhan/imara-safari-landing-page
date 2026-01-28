@@ -337,7 +337,7 @@ const ContactInformation = ({ onSubmit, submitError }) => {
                                 </div>
                             )}
 
-                            <button type="submit" className="btn btn-theme text-uppercase p-3 fw-bold">
+                            <button type="submit" className="btn btn-theme text-uppercase p-3 fw-bold mb-3">
                                 Send me an offer
                             </button>
                         </form>

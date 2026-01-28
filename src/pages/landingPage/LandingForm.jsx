@@ -25,47 +25,6 @@ const LandingForm = () => {
         contact: {}
     });
 
-    // const validateBeforeSubmit = (contactData) => {
-
-    //     if (!formData.parks || formData.parks.length === 0) {
-    //         return "Error ! Please Check Which Parks Do You Want To Visit...!!!!!!";
-    //     }
-
-    //     if (!formData.planningDays) {
-    //         return "Error ! Please Check How Many Days Of Safari Are You Planning...!!!!!!";
-    //     }
-
-    //     if (!formData.safariStyle) {
-    //         return "Error ! Please Check What Type Of Tanzania Safari Are You Looking For...!!!!!!";
-    //     }
-
-    //     if (!formData.travelDate) {
-    //         return "Error ! Please Choose When You Are Planning For The Safari...!!!!!!";
-    //     }
-
-    //     if (!contactData.fullName) {
-    //         return "Error ! Please Enter Your Full Name...!!!!!!";
-    //     }
-
-    //     if (!contactData.email) {
-    //         return "Error ! Please Enter Your Email Address...!!!!!!";
-    //     }
-
-    //     if (!contactData.countryCode) {
-    //         return "Error ! Please select your country code...!!!!!!";
-    //     }
-
-    //     if (!contactData.phone) {
-    //         return "Error ! Please enter your phone number...!!!!!!";
-    //     }
-
-    //     if (!contactData.people) {
-    //         return "Error ! Please Enter Number Of People...!!!!!!";
-    //     }
-
-    //     return ""; //  ALL GOOD
-    // };
-
     const validateBeforeSubmit = (contactData) => {
 
         if (!formData.parks || formData.parks.length === 0) {
@@ -108,21 +67,10 @@ const LandingForm = () => {
         return null; // ALL GOOD
     };
 
-
     const updateFormData = (key, value) => {
         setFormData(prev => ({ ...prev, [key]: value }));
     };
 
-    // const handleFinalSubmit = (contactData) => {
-    //     const errorMessage = validateBeforeSubmit(contactData);
-
-    //     if (errorMessage) {
-    //         setSubmitError(errorMessage);
-    //         contactInfoRef.current?.scrollIntoView({ behavior: "smooth" });
-    //         return; // STOP HERE
-    //     }
-
-    //     setSubmitError("");
     const handleFinalSubmit = (contactData) => {
         const error = validateBeforeSubmit(contactData);
 
@@ -155,7 +103,7 @@ const LandingForm = () => {
 
 
     return (
-        <div>
+        <>
             <HeroSection scrollToParks={() => parksRef.current?.scrollIntoView({ behavior: "smooth" })} />
 
             <NationalParks
@@ -184,7 +132,15 @@ const LandingForm = () => {
             <div ref={contactInfoRef}>
                 <ContactInformation onSubmit={handleFinalSubmit} submitError={submitError} />
             </div>
-        </div>
+
+                {/* <PlanningSafari
+                ref={planningSafariRef}
+                    onChange={(date) => updateFormData("travelDate", date)}
+                    scrollToContactInformation={() => contactInfoRef.current?.scrollIntoView({ behavior: "smooth" })}
+                />
+
+                <ContactInformation ref={contactInfoRef} onSubmit={handleFinalSubmit} submitError={submitError} /> */}
+        </>
     );
 };
 
