@@ -8,7 +8,7 @@ const NationalParks = forwardRef(({ onChange, scrollToPlanningDays }, ref) => {
         {
             id: 1,
             name: "Serengeti",
-            image: "/images/national-parks/demo-pic1.webp",
+            image: "/images/national-parks/serengeti.webp",
             description:
                 "Endless savannahs famous for the Great Migration, predator sightings, open landscapes, and classic game drives throughout different seasons.",
         },
