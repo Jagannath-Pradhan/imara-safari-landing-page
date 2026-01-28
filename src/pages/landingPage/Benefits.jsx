@@ -44,7 +44,7 @@ const Benefits = () => {
                     </div>
                 </div>
 
-                <div className="row g-lg-4 g-2">
+                <div className="row g-lg-4 g-2 mb-lg-4 mb-md-3 mb-2">
                     {benefitsData.map((benefit) => (
                         <div key={benefit.id} className="col-lg-6 col-md-6">
                             <div className="benefit-card d-flex align-items-lg-start">

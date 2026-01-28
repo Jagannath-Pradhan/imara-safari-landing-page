@@ -1,8 +1,7 @@
 import { forwardRef, useState, useEffect } from "react";
 import { Check } from "lucide-react";
 
-// const NationalParks = forwardRef(({ onChange }, ref) => {
-    const NationalParks = forwardRef(({ onChange, scrollToPlanningDays }, ref) => {
+const NationalParks = forwardRef(({ onChange, scrollToPlanningDays }, ref) => {
     const [selectedParks, setSelectedParks] = useState([]);
 
     const parks = [
@@ -39,14 +38,14 @@ import { Check } from "lucide-react";
             name: "Arusha",
             image: "/images/national-parks/arusha.webp",
             description:
-            "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
+                "A compact park featuring tree-climbing lions, birdlife, forested paths, groundwater lakes, and varied scenery within a short safari circuit.",
         },
         {
             id: 6,
             name: "Zanzibar",
             image: "/images/national-parks/zanzibar.jpg",
             description:
-            "An island escape with white beaches, Swahili culture, historic Stone Town, spice farms, and relaxed coastal experiences after safari journeys.",
+                "An island escape with white beaches, Swahili culture, historic Stone Town, spice farms, and relaxed coastal experiences after safari journeys.",
         },
         {
             id: 7,
@@ -54,7 +53,7 @@ import { Check } from "lucide-react";
             image: "/images/national-parks/ngorongoro-crater.webp",
             description:
                 "A volcanic caldera offering dense wildlife viewing, scenic viewpoints, black rhinos, flamingos, and short travel distances within the crater floor.",
-            },
+        },
         {
             id: 8,
             name: "Not Sure / Other",
@@ -73,20 +72,20 @@ import { Check } from "lucide-react";
     // };
 
     const handleParkClick = (parkName) => {
-    setSelectedParks(prev => {
-        const updated =
-            prev.includes(parkName)
-                ? prev.filter(p => p !== parkName)
-                : [...prev, parkName];
+        setSelectedParks(prev => {
+            const updated =
+                prev.includes(parkName)
+                    ? prev.filter(p => p !== parkName)
+                    : [...prev, parkName];
 
-        // SCROLL ONLY WHEN AT LEAST ONE PARK IS SELECTED
-        if (updated.length > 0) {
+            // SCROLL ONLY WHEN AT LEAST ONE PARK IS SELECTED
+            if (updated.length > 0) {
                 scrollToPlanningDays?.();
-        }
+            }
 
-        return updated;
-    });
-};
+            return updated;
+        });
+    };
 
     // SYNC TO PARENT SAFELY
     useEffect(() => {
@@ -134,9 +133,9 @@ import { Check } from "lucide-react";
                                                 }}
                                             >
                                                 <div
-                                                className="tick-background">
+                                                    className="tick-background">
                                                     <Check
-                                                    className="check"
+                                                        className="check"
                                                         size={50}
                                                         strokeWidth={5}
                                                         style={{

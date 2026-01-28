@@ -112,19 +112,13 @@ const LandingForm = () => {
                 scrollToPlanningDays={() => planningDaysRef.current?.scrollIntoView({ behavior: "smooth" })}
             />
 
-            {/* <PlanningDays
+            <PlanningDays
+                ref={planningDaysRef}
                 onChange={(day) => updateFormData("planningDays", day)}
-                scrollToSafariStyle={() => safariStyleRef.current?.scrollIntoView({ behavior: "smooth" })}
-            /> */}
-
-            <div ref={planningDaysRef}>
-                <PlanningDays
-                    onChange={(day) => updateFormData("planningDays", day)}
-                    scrollToSafariStyle={() =>
-                        safariStyleRef.current?.scrollIntoView({ behavior: "smooth" })
-                    }
-                />
-            </div>
+                scrollToSafariStyle={() =>
+                    safariStyleRef.current?.scrollIntoView({ behavior: "smooth" })
+                }
+            />
 
             <SafariStyle
                 ref={safariStyleRef}
@@ -132,24 +126,13 @@ const LandingForm = () => {
                 scrollToPlanningSafari={() => planningSafariRef.current?.scrollIntoView({ behavior: "smooth" })}
             />
 
-            <div ref={planningSafariRef}>
-                <PlanningSafari
-                    onChange={(date) => updateFormData("travelDate", date)}
-                    scrollToContactInformation={() => contactInfoRef.current?.scrollIntoView({ behavior: "smooth" })}
-                />
-            </div>
-
-            <div ref={contactInfoRef}>
-                <ContactInformation onSubmit={handleFinalSubmit} submitError={submitError} />
-            </div>
-
-            {/* <PlanningSafari
+            <PlanningSafari
                 ref={planningSafariRef}
-                    onChange={(date) => updateFormData("travelDate", date)}
-                    scrollToContactInformation={() => contactInfoRef.current?.scrollIntoView({ behavior: "smooth" })}
-                />
+                onChange={(date) => updateFormData("travelDate", date)}
+                scrollToContactInformation={() => contactInfoRef.current?.scrollIntoView({ behavior: "smooth" })}
+            />
 
-                <ContactInformation ref={contactInfoRef} onSubmit={handleFinalSubmit} submitError={submitError} /> */}
+            <ContactInformation ref={contactInfoRef} onSubmit={handleFinalSubmit} submitError={submitError} />
         </>
     );
 };

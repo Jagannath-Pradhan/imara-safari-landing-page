@@ -209,7 +209,7 @@ h5 {
 /* small mobile */
 @media (max-width: 415px) {
     header img {
-        height: 45vh !important;
+        height: 50vh !important;
         object-fit: cover;
     }
 

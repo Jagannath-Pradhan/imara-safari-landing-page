@@ -12,13 +12,6 @@ const SafariStyle = forwardRef(
             { id: 4, name: "Not decided yet", image: "/images/safari-style/not-decided.webp" },
         ];
 
-        // const handleStyleClick = (styleId) => {
-        //   setSelectedStyle(styleId);
-        //   scrollToPlanningSafari(); // SAME BEHAVIOR AS PlanningDays
-        // };
-
-        // const isStyleSelected = (styleId) => selectedStyle === styleId;
-
         const handleStyleClick = (style) => {
             setSelectedStyle(style.id);  // UI state
             onChange(style.name);        // SEND TO PARENT
