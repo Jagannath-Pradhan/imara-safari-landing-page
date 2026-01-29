@@ -92,7 +92,7 @@ const LandingForm = () => {
             contact: contactData,
         };
 
-        console.log("FINAL FORM DATA", finalData);
+        // console.log("FINAL FORM DATA", finalData);
         toast.success("Your Information Submitted Successfully.");
 
         // redirect after short delay

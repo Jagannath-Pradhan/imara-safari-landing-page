@@ -47,7 +47,7 @@ const PlanningSafari = forwardRef(
             const formattedDate = `${String(day).padStart(2, '0')}-${String(selectedMonth + 1).padStart(2, '0')}-${currentYear}`;
             setSelectedDate(selected);       // ui state
             onChange(formattedDate);       
-            console.log(formattedDate);
+            // console.log(formattedDate);
             scrollToContactInformation();
 
             scrollToContactInformation();

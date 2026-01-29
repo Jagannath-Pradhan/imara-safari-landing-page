@@ -15,7 +15,7 @@ const SafariStyle = forwardRef(
         const handleStyleClick = (style) => {
             setSelectedStyle(style.id);  // ui state
             onChange(style.name);        // send to parent
-            console.log(style.name)
+            // console.log(style.name)
             scrollToPlanningSafari();    // keep behavior
         };
 

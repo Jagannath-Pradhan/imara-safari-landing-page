@@ -82,7 +82,7 @@ const NationalParks = forwardRef(({ onChange, scrollToPlanningDays }, ref) => {
     // sync to parent
     useEffect(() => {
         onChange(selectedParks);
-        console.log(selectedParks)
+        // console.log(selectedParks)
     }, [selectedParks, onChange]);
 
     return (

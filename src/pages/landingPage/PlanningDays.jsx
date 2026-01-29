@@ -31,7 +31,7 @@ const PlanningDays = forwardRef(
         const handleDayClick = (day) => {
             setSelectedDay(day.id);   // ui state
             onChange(day.name);       // send to parent
-            console.log(day.name)
+            // console.log(day.name)
             scrollToSafariStyle();    // keep existing behavior
         };
 
