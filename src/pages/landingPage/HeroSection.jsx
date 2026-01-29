@@ -7,7 +7,7 @@ const HeroSection = ({ scrollToParks }) => {
                 </div>
             </div>
             <img
-                src="/images/banner-img.jpeg"
+                src="/images/banner-image.webp"
                 className="img-fluid w-100"
                 alt="hero-img"
             />
